@@ -170,7 +170,6 @@ Der Topside Computer benötigt die statische IP-Adresse ***192.168.2.1*** um mit
 2. Starten des Video streams
    ```
    gst-launch-1.0 v4l2src device=/dev/video2 ! queue ! video/x-h264,width=1920,height=1080,framerate=30/1 ! h264parse ! rtph264pay ! udpsink host=192.168.2.1 port=5600
-
    ```
 3. Starten des USBIP Server
    ```
