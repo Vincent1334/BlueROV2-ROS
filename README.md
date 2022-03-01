@@ -74,6 +74,8 @@ Der GStreamer wird dafür verwendet, den Video output der intigrierten Kamera al
 ```
 sudo apt-get install libgstreamer-plugins-base1.0-dev
 sudo apt-get install libgstreamer-plugins-bad1.0-dev 
+sudo apt-get install libgstreamer-plugins-good1.0-dev
+sudo apt-get install libgstreamer-plugins-ugly1.0-dev 
 ```
 
 #### USBIP
