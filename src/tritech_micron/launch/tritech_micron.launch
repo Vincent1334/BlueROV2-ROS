@@ -1,0 +1,16 @@
+<launch>
+  <!-- Read arguments -->
+  <arg name="port" default="/dev/ttyUSB0"/>
+  <arg name="frame" default="sonar"/>
+
+  <node name="tritech_micron"
+        pkg="tritech_micron"
+        type="scan.py"
+        output="screen"
+        respawn="true"
+        respawn_delay="5">
+    <!-- Set ROS parameters -->
+    <param name="port" value="$(arg port)"/>
+    <param name="frame" value="$(arg frame)"/>
+  </node>
+</launch>

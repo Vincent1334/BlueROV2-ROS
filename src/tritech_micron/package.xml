@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>tritech_micron</name>
+  <version>1.0.0</version>
+  <description>
+    Controls and communicates with the Tritech Micron sonar.
+  </description>
+
+  <maintainer email="dev@anassinator.com">Anass Al</maintainer>
+  <license>GPLv2</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>genmsg</depend>
+  <depend>geometry_msgs</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>message_generation</depend>
+  
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>python-bitstring-pip</exec_depend>
+</package>
