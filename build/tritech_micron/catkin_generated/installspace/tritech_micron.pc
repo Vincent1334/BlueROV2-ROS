@@ -1,0 +1,8 @@
+prefix=/home/bluerov/Schreibtisch/blueROV2/install
+
+Name: tritech_micron
+Description: Description of tritech_micron
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs message_runtime rospy sensor_msgs std_msgs

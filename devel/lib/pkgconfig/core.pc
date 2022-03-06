@@ -1,0 +1,8 @@
+prefix=/home/bluerov/Schreibtisch/blueROV2/devel
+
+Name: core
+Description: Description of core
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
