@@ -179,17 +179,17 @@ Der Topside Computer benötigt die statische IP-Adresse ***192.168.2.1*** um mit
     ```
 4. Starten von MAVlink
     ```
-    mavproxy.py --baudrate 921600 --aircraft bluerov --out 192.168.2.1:14550
+    mavproxy.py --master /dev/ttyACM0 --baudrate 921600 --aircraft bluerov --out 192.168.2.1:14550
     ```
 
 Die Arbeitschritte 1-4 können natürlich auch in einem Skript automatisiert werden.
 
 ### Topside Computer
-Je nach anwendugsfall, kann man mit QGroundControll oder ROS arbeiten.
+Je nach Anwendugsfall, kann man mit QGroundControll oder ROS arbeiten.
 
 #### Launchfiles übersicht
 
-Um nur das Videobid der Kamera zu erfassen, kann man folgendes launchfile starten
+Um nur das Videobild der Kamera zu erfassen, kann man folgendes launchfile starten
 ```
 roslaunch core video.launch
 ```
