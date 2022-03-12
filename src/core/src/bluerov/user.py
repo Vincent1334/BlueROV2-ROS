@@ -48,17 +48,7 @@ class Code(object):
         self.sub.subscribe_topic('/joy', Joy)
         self.sub.subscribe_topic('/mavros/battery', BatteryState)
         self.sub.subscribe_topic('/mavros/rc/in', RCIn)
-        self.sub.subscribe_topic('/mavros/rc/out', RCOut)
-
-        self.cam = None
-        try:
-            video_udp_port = rospy.get_param("/user_node/video_udp_port")
-            rospy.loginfo("video_udp_port: {}".format(video_udp_port))
-            self.cam = video.Video(video_udp_port)
-        except Exception as error:
-            rospy.loginfo(error)
-            self.cam = video.Video()
-
+        self.sub.subscribe_topic('/mavros/rc/out', RCOut)    
 
     def arm(self):
         """ Arm the vehicle and trigger the disarm
@@ -97,7 +87,9 @@ class Code(object):
         """
         while not rospy.is_shutdown():
             time.sleep(0.1)
-            # Try to get data
+
+#       Display Battery and Channels
+# <----------------------------------------------------------------------------------------->
             try:
                 rospy.loginfo(self.sub.get_data()['mavros']['battery']['voltage'])
                 rospy.loginfo(self.sub.get_data()['mavros']['rc']['in']['channels'])
@@ -105,6 +97,8 @@ class Code(object):
             except Exception as error:
                 print('Get data error:', error)
 
+#       Work with Joystick data
+# <----------------------------------------------------------------------------------------->
             try:
                 # Get joystick data
                 joy = self.sub.get_data()['joy']['axes']
@@ -116,9 +110,19 @@ class Code(object):
                 # Send joystick data as rc output into rc override topic
                 # (fake radio controller)
                 self.pub.set_data('/mavros/rc/override', override)
+
+                # Set Light value
+                # TODO
+
+                # Set Camera Servo
+                # TODO
+                
+
+
             except Exception as error:
                 print('joy error:', error)
 
+# <----------------------------------------------------------------------------------------->
             try:
                 # Get pwm output and send it to Gazebo model
                 rc = self.sub.get_data()['mavros']['rc']['out']['channels']
@@ -129,18 +133,7 @@ class Code(object):
                 self.pub.set_data('/BlueRov2/body_command', joint)
             except Exception as error:
                 print('rc error:', error)
-
-            try:
-                if not self.cam.frame_available():
-                    continue
-
-                # Show video output
-                frame = self.cam.frame()
-                cv2.imshow('BlueROV2 Camera', frame)
-                cv2.waitKey(1)
-            except Exception as error:
-                print('imshow error:', error)
-
+# <----------------------------------------------------------------------------------------->
     def disarm(self):
         self.arm_service(False)
 

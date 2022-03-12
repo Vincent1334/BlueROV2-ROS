@@ -33,7 +33,11 @@
 
   <node pkg="rosservice" type="rosservice" name="mavros_set_stream" args="call --wait /mavros/set_stream_rate 0 10 1"/>
 
-  <node pkg="core" type="user_mav" name="user_node" output="$(arg log_output)">
+  <!-- start user node -->
+  <node pkg="core" type="user_mav" name="user_node" output="$(arg log_output)"/>
+  
+   <!-- start Video stream -->
+  <node pkg="core" type="video" name="bluerov_video" output="$(arg log_output)">
     <param name="video_udp_port" value="$(arg video_udp_port)"/>
   </node>
 </launch>
