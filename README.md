@@ -193,4 +193,8 @@ Um nur das Videobild der Kamera zu erfassen, kann man folgendes launchfile start
 ```
 roslaunch core video.launch
 ```
+Für eine manuelle Steuerung des BlueROVs mittels Joystick startet man
+```
+roslaunch core user_mav.launch
+```
 
