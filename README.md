@@ -140,9 +140,9 @@ Jetzt ist der Pi bereit zum einsatz.
 
 ### Topside Computer
 
-Der Topside Computer benötigt eine aktuelle ROS instalation.
+Der Topside Computer benötigt ROS Kinetic. 
 
-http://wiki.ros.org/ROS/Installation
+http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 #### QGroundControl
 
@@ -157,6 +157,14 @@ sudo apt install libqt5gui5 -y
 
 Im anschluss kann [QGroundContol](https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage) heruntergeladen werden.
 Um die Video funktion nutzen zu können, muss für den GStreamer die Plugins bad und libav instaliert werden.
+
+#### MAVRos
+Um MavRos zu instalieren werden folgende Befehle ausgeführt.
+```
+sudo apt-get install ros-kinetic-mavros ros-kinetic-mavros-extras
+wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+sudo bash ./install_geographiclib_datasets.sh
+```
 
 #### Netzwerk
 
@@ -186,6 +194,13 @@ Die Arbeitschritte 1-4 können natürlich auch in einem Skript automatisiert wer
 
 ### Topside Computer
 Je nach Anwendugsfall, kann man mit QGroundControll oder ROS arbeiten.
+
+#### Sonar über USBIP einbinden
+Um das Sonar über USBIp einzubinden, werden folgende Befehle ausgeführt.
+```
+sudo modprobe vhci-hcd
+sudo usbip attach -r 192.168.2.2 -b 1-1.4
+```
 
 #### Launchfiles übersicht
 
