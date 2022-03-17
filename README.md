@@ -166,6 +166,15 @@ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/inst
 sudo bash ./install_geographiclib_datasets.sh
 ```
 
+#### PyMavLink
+PyMavLink wird für das core Package benötigt. Um es zu installieren, werden folgende Befehle verwendet.
+```
+sudo apt-get install gcc python-dev libxml2-dev libxslt-dev
+sudo apt-get install python-numpy python-pytest
+sudo python -m pip install --upgrade future lxml
+sudo python -m pip install --upgrade pymavlink
+```
+
 #### Netzwerk
 
 Der Topside Computer benötigt die statische IP-Adresse ***192.168.2.1*** um mit dem BlueROV komunizieren zu können.
