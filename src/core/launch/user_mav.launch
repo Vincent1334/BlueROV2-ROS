@@ -26,6 +26,9 @@
     <rosparam command="load" file="$(arg config_yaml)"/>
   </node>
 
+  <!-- import bluerov2_node for sepecific topics-->
+  <include file="$(find core)/launch/bluerov2_node.launch" />
+
   <!-- start the joystick driver -->
   <node respawn="true" pkg="joy" type="joy_node" name="joy_node">
     <param name="dev" type="string" value="$(arg joy_dev)" />
