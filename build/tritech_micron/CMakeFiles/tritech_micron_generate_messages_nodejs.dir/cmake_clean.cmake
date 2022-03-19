@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tritech_micron_generate_messages_nodejs"
-  "/home/bluerov/Schreibtisch/blueROV2/devel/share/gennodejs/ros/tritech_micron/msg/TritechMicronConfig.js"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/tritech_micron/msg/TritechMicronConfig.js"
 )
 
 # Per-language clean rules from dependency scanning.

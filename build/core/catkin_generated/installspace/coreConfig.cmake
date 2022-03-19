@@ -67,14 +67,14 @@ set(core_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(core_SOURCE_PREFIX /home/bluerov/Schreibtisch/blueROV2/src/core)
-  set(core_DEVEL_PREFIX /home/bluerov/Schreibtisch/blueROV2/devel)
+  set(core_SOURCE_PREFIX /home/bluerov/Schreibtisch/BlueROV2/src/core)
+  set(core_DEVEL_PREFIX /home/bluerov/Schreibtisch/BlueROV2/devel)
   set(core_INSTALL_PREFIX "")
   set(core_PREFIX ${core_DEVEL_PREFIX})
 else()
   set(core_SOURCE_PREFIX "")
   set(core_DEVEL_PREFIX "")
-  set(core_INSTALL_PREFIX /home/bluerov/Schreibtisch/blueROV2/install)
+  set(core_INSTALL_PREFIX /home/bluerov/Schreibtisch/BlueROV2/install)
   set(core_PREFIX ${core_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/bluerov/Schreibtisch/blueROV2/install/lib;/home/bluerov/Schreibtisch/blueROV2/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/bluerov/Schreibtisch/BlueROV2/install/lib;/home/bluerov/Schreibtisch/BlueROV2/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

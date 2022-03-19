@@ -56,7 +56,7 @@ class BlueRov(Bridge):
                 '/battery',
                 BatteryState,
                 1
-            ],
+            ],           
             [
                 self._create_camera_msg,
                 '/camera/image_raw',
@@ -88,6 +88,13 @@ class BlueRov(Bridge):
                 self._setpoint_velocity_cmd_vel_callback,
                 '/setpoint_velocity/cmd_vel',
                 TwistStamped,
+                1
+            ],
+             #Light experimental UzL
+            [
+                self._create_lights_msg,
+                '/lights',
+                UInt16,
                 1
             ],
             [
@@ -265,6 +272,10 @@ class BlueRov(Bridge):
             None,
             ]
         self.set_attitude_target(params)
+
+    #Uzl lights msg
+    def _create_lights_msg(self, msg, topic):
+        self.set_lights_on()
 
     def _create_header(self, msg):
         """ Create ROS message header

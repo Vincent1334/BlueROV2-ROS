@@ -1,8 +1,8 @@
-# Install script for directory: /home/bluerov/Schreibtisch/blueROV2/src/core
+# Install script for directory: /home/bluerov/Schreibtisch/BlueROV2/src/core
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bluerov/Schreibtisch/blueROV2/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bluerov/Schreibtisch/BlueROV2/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,57 +33,57 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  include("/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/safe_execute_install.cmake")
+  include("/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/core.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/core.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/core/cmake" TYPE FILE FILES
-    "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/coreConfig.cmake"
-    "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/coreConfig-version.cmake"
+    "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/coreConfig.cmake"
+    "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/coreConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/core" TYPE FILE FILES "/home/bluerov/Schreibtisch/blueROV2/src/core/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/core" TYPE FILE FILES "/home/bluerov/Schreibtisch/BlueROV2/src/core/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/core/launch" TYPE FILE FILES
-    "/home/bluerov/Schreibtisch/blueROV2/src/core/launch/mav_pluginlists.yaml"
-    "/home/bluerov/Schreibtisch/blueROV2/src/core/launch/user_mav.launch"
-    "/home/bluerov/Schreibtisch/blueROV2/src/core/launch/video.launch"
-    "/home/bluerov/Schreibtisch/blueROV2/src/core/launch/bluerov2_node.launch"
+    "/home/bluerov/Schreibtisch/BlueROV2/src/core/launch/mav_pluginlists.yaml"
+    "/home/bluerov/Schreibtisch/BlueROV2/src/core/launch/user_mav.launch"
+    "/home/bluerov/Schreibtisch/BlueROV2/src/core/launch/video.launch"
+    "/home/bluerov/Schreibtisch/BlueROV2/src/core/launch/bluerov2_node.launch"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/core" TYPE DIRECTORY FILES
-    "/home/bluerov/Schreibtisch/blueROV2/src/core/model"
-    "/home/bluerov/Schreibtisch/blueROV2/src/core/config"
+    "/home/bluerov/Schreibtisch/BlueROV2/src/core/model"
+    "/home/bluerov/Schreibtisch/BlueROV2/src/core/config"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/user_mav")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/user_mav")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/video")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/video")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/bridge.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/bridge.py")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/bluerov_node.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/bluerov_node.py")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/blueROV2/build/core/catkin_generated/installspace/node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/core" TYPE PROGRAM FILES "/home/bluerov/Schreibtisch/BlueROV2/build/core/catkin_generated/installspace/node")
 endif()
 

@@ -115,6 +115,12 @@ class Bridge(object):
         params = [mavutil.mavlink.MAV_MODE_GUIDED, 0, 0, 0, 0, 0, 0]
         self.send_command_long(mavutil.mavlink.MAV_CMD_DO_SET_MODE, params)
 
+    def set_lights_on(self):
+        print("Licht ist an")
+        params = [10, 1500, 0, 0, 0, 0, 0]
+        self.send_command_long(183, [8, 1500, 0, 0, 0, 0, 0])
+
+
     def send_command_long(self, command, params=[0, 0, 0, 0, 0, 0, 0], confirmation=0):
         """ Function to abstract long commands
 

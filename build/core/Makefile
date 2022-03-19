@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/blueROV2/src
+CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/BlueROV2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/blueROV2/build
+CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/BlueROV2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bluerov/Schreibtisch/blueROV2/build/CMakeFiles /home/bluerov/Schreibtisch/blueROV2/build/core/CMakeFiles/progress.marks
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bluerov/Schreibtisch/blueROV2/build/CMakeFiles 0
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles /home/bluerov/Schreibtisch/BlueROV2/build/core/CMakeFiles/progress.marks
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/clean
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 core/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(MAKE) -f CMakeFiles/Makefile2 core/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : core/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -177,7 +177,7 @@ _catkin_empty_exported_target: core/CMakeFiles/_catkin_empty_exported_target.dir
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(MAKE) -f core/CMakeFiles/_catkin_empty_exported_target.dir/build.make core/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(MAKE) -f core/CMakeFiles/_catkin_empty_exported_target.dir/build.make core/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

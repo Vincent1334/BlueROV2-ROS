@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/blueROV2/src
+CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/BlueROV2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/blueROV2/build
+CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/BlueROV2/build
 
 # Utility rule file for sensor_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build: sensor_m
 .PHONY : tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 
 tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
-	cd /home/bluerov/Schreibtisch/blueROV2/build/tritech_micron && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/bluerov/Schreibtisch/BlueROV2/build/tritech_micron && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 
 tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bluerov/Schreibtisch/blueROV2/src /home/bluerov/Schreibtisch/blueROV2/src/tritech_micron /home/bluerov/Schreibtisch/blueROV2/build /home/bluerov/Schreibtisch/blueROV2/build/tritech_micron /home/bluerov/Schreibtisch/blueROV2/build/tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bluerov/Schreibtisch/BlueROV2/src /home/bluerov/Schreibtisch/BlueROV2/src/tritech_micron /home/bluerov/Schreibtisch/BlueROV2/build /home/bluerov/Schreibtisch/BlueROV2/build/tritech_micron /home/bluerov/Schreibtisch/BlueROV2/build/tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tritech_micron/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
 

@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/bluerov/Schreibtisch/blueROV2/src/core"
+echo_and_run cd "/home/bluerov/Schreibtisch/BlueROV2/src/core"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/bluerov/Schreibtisch/blueROV2/install/lib/python2.7/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/bluerov/Schreibtisch/BlueROV2/install/lib/python2.7/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/bluerov/Schreibtisch/blueROV2/install/lib/python2.7/dist-packages:/home/bluerov/Schreibtisch/blueROV2/build/lib/python2.7/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/bluerov/Schreibtisch/blueROV2/build" \
+    PYTHONPATH="/home/bluerov/Schreibtisch/BlueROV2/install/lib/python2.7/dist-packages:/home/bluerov/Schreibtisch/BlueROV2/build/lib/python2.7/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/bluerov/Schreibtisch/BlueROV2/build" \
     "/usr/bin/python2" \
-    "/home/bluerov/Schreibtisch/blueROV2/src/core/setup.py" \
+    "/home/bluerov/Schreibtisch/BlueROV2/src/core/setup.py" \
      \
-    build --build-base "/home/bluerov/Schreibtisch/blueROV2/build/core" \
+    build --build-base "/home/bluerov/Schreibtisch/BlueROV2/build/core" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/bluerov/Schreibtisch/blueROV2/install" --install-scripts="/home/bluerov/Schreibtisch/blueROV2/install/bin"
+    --install-layout=deb --prefix="/home/bluerov/Schreibtisch/BlueROV2/install" --install-scripts="/home/bluerov/Schreibtisch/BlueROV2/install/bin"

@@ -1,8 +1,8 @@
-prefix=/home/bluerov/Schreibtisch/blueROV2/devel
+prefix=/home/bluerov/Schreibtisch/BlueROV2/devel
 
 Name: tritech_micron
 Description: Description of tritech_micron
 Version: 1.0.0
-Cflags: -I/home/bluerov/Schreibtisch/blueROV2/devel/include
+Cflags: -I/home/bluerov/Schreibtisch/BlueROV2/devel/include
 Libs: -L${prefix}/lib 
 Requires: geometry_msgs message_runtime rospy sensor_msgs std_msgs

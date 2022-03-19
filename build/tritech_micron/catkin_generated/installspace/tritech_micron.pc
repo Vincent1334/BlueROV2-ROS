@@ -1,4 +1,4 @@
-prefix=/home/bluerov/Schreibtisch/blueROV2/install
+prefix=/home/bluerov/Schreibtisch/BlueROV2/install
 
 Name: tritech_micron
 Description: Description of tritech_micron

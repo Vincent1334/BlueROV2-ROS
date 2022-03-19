@@ -36,7 +36,7 @@ class Code(object):
 
         # Do what is necessary to start the process
         # and to leave gloriously
-        self.arm()
+        self.arm()       
 
         self.sub = subs.Subs()
         self.pub = pubs.Pubs()
@@ -48,7 +48,7 @@ class Code(object):
         self.sub.subscribe_topic('/joy', Joy)
         self.sub.subscribe_topic('/mavros/battery', BatteryState)
         self.sub.subscribe_topic('/mavros/rc/in', RCIn)
-        self.sub.subscribe_topic('/mavros/rc/out', RCOut)    
+        self.sub.subscribe_topic('/mavros/rc/out', RCOut)   
 
     def arm(self):
         """ Arm the vehicle and trigger the disarm
@@ -61,6 +61,9 @@ class Code(object):
         # Disarm is necessary when shutting down
         rospy.on_shutdown(self.disarm)
 
+# https://mavlink.io/en/messages/common.html#mav_commands
+# https://discuss.bluerobotics.com/t/ros-support-for-bluerov2/1550/32?page=2
+   
 
     @staticmethod
     def pwm_to_thrust(pwm):
@@ -123,6 +126,8 @@ class Code(object):
                 print('joy error:', error)
 
 # <----------------------------------------------------------------------------------------->
+           
+           
             try:
                 # Get pwm output and send it to Gazebo model
                 rc = self.sub.get_data()['mavros']['rc']['out']['channels']

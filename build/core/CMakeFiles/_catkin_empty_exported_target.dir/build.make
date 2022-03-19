@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/blueROV2/src
+CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/BlueROV2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/blueROV2/build
+CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/BlueROV2/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ core/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_exported_
 .PHONY : core/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 core/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/bluerov/Schreibtisch/blueROV2/build/core && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/bluerov/Schreibtisch/BlueROV2/build/core && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : core/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 core/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bluerov/Schreibtisch/blueROV2/src /home/bluerov/Schreibtisch/blueROV2/src/core /home/bluerov/Schreibtisch/blueROV2/build /home/bluerov/Schreibtisch/blueROV2/build/core /home/bluerov/Schreibtisch/blueROV2/build/core/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bluerov/Schreibtisch/BlueROV2/src /home/bluerov/Schreibtisch/BlueROV2/src/core /home/bluerov/Schreibtisch/BlueROV2/build /home/bluerov/Schreibtisch/BlueROV2/build/core /home/bluerov/Schreibtisch/BlueROV2/build/core/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : core/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

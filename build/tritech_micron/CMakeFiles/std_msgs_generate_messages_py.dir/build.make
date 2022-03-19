@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/blueROV2/src
+CMAKE_SOURCE_DIR = /home/bluerov/Schreibtisch/BlueROV2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/blueROV2/build
+CMAKE_BINARY_DIR = /home/bluerov/Schreibtisch/BlueROV2/build
 
 # Utility rule file for std_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/build: std_msgs_gene
 .PHONY : tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/build
 
 tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	cd /home/bluerov/Schreibtisch/blueROV2/build/tritech_micron && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/bluerov/Schreibtisch/BlueROV2/build/tritech_micron && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/depend:
-	cd /home/bluerov/Schreibtisch/blueROV2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bluerov/Schreibtisch/blueROV2/src /home/bluerov/Schreibtisch/blueROV2/src/tritech_micron /home/bluerov/Schreibtisch/blueROV2/build /home/bluerov/Schreibtisch/blueROV2/build/tritech_micron /home/bluerov/Schreibtisch/blueROV2/build/tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bluerov/Schreibtisch/BlueROV2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bluerov/Schreibtisch/BlueROV2/src /home/bluerov/Schreibtisch/BlueROV2/src/tritech_micron /home/bluerov/Schreibtisch/BlueROV2/build /home/bluerov/Schreibtisch/BlueROV2/build/tritech_micron /home/bluerov/Schreibtisch/BlueROV2/build/tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tritech_micron/CMakeFiles/std_msgs_generate_messages_py.dir/depend
 
