@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import cv2
 import rospy
 import time
 
@@ -11,15 +10,14 @@ try:
 except:
     import bluerov.pubs as pubs
     import bluerov.subs as subs
-    import bluerov.video as video
 
 from geometry_msgs.msg import TwistStamped
 from mavros_msgs.srv import CommandBool
 from sensor_msgs.msg import JointState, Joy
+from std_msgs.msg import Int16
 
 from sensor_msgs.msg import BatteryState
 from mavros_msgs.msg import OverrideRCIn, RCIn, RCOut
-
 
 class Code(object):
 
@@ -30,6 +28,7 @@ class Code(object):
         pub (Pub): Pub object, do topics publication
         sub (Sub): Sub object, subscribe in topics
     """
+    
 
     def __init__(self):
         super(Code, self).__init__()
@@ -44,11 +43,13 @@ class Code(object):
         self.pub.subscribe_topic('/mavros/rc/override', OverrideRCIn)
         self.pub.subscribe_topic('/mavros/setpoint_velocity/cmd_vel', TwistStamped)
         self.pub.subscribe_topic('/BlueRov2/body_command', JointState)
+        self.pub.subscribe_topic('/BlueRov2/lights', Int16)
 
         self.sub.subscribe_topic('/joy', Joy)
         self.sub.subscribe_topic('/mavros/battery', BatteryState)
         self.sub.subscribe_topic('/mavros/rc/in', RCIn)
-        self.sub.subscribe_topic('/mavros/rc/out', RCOut)   
+        self.sub.subscribe_topic('/mavros/rc/out', RCOut) 
+        self.sub.subscribe_topic('/mavros/rc/override', OverrideRCIn)  
 
     def arm(self):
         """ Arm the vehicle and trigger the disarm
@@ -108,34 +109,29 @@ class Code(object):
 
                 # rc run between 1100 and 2000, a joy command is between -1.0 and 1.0
                 override = [int(val*400 + 1500) for val in joy]
+                override[6] = 1500
                 for _ in range(len(override), 8):
                     override.append(0)
                 # Send joystick data as rc output into rc override topic
                 # (fake radio controller)
                 self.pub.set_data('/mavros/rc/override', override)
-
-                # Set Light value
-                # TODO
-
-                # Set Camera Servo
-                # TODO
                 
-
-
             except Exception as error:
                 print('joy error:', error)
 
 # <----------------------------------------------------------------------------------------->
-           
+           # Light Test
+           # mavcmd_proxy = rospy.ServiceProxy("/mavros/cmd/command", CommandLong)
+            #response = mavcmd_proxy(0, 183, 0, 7, 2000, 0,0,0,0,0)
            
             try:
                 # Get pwm output and send it to Gazebo model
-                rc = self.sub.get_data()['mavros']['rc']['out']['channels']
+               # rc = self.sub.get_data()['mavros']['rc']['out']['channels']
                 joint = JointState()
                 joint.name = ["thr{}".format(u + 1) for u in range(5)]
-                joint.position = [self.pwm_to_thrust(pwm) for pwm in rc]
+                #joint.position = [self.pwm_to_thrust(pwm) for pwm in rc]
 
-                self.pub.set_data('/BlueRov2/body_command', joint)
+                #self.pub.set_data('/BlueRov2/body_command', joint)
             except Exception as error:
                 print('rc error:', error)
 # <----------------------------------------------------------------------------------------->

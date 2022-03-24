@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from time import sleep
 from pymavlink import mavutil
 
 class Bridge(object):
@@ -115,11 +116,29 @@ class Bridge(object):
         params = [mavutil.mavlink.MAV_MODE_GUIDED, 0, 0, 0, 0, 0, 0]
         self.send_command_long(mavutil.mavlink.MAV_CMD_DO_SET_MODE, params)
 
-    def set_lights_on(self):
-        print("Licht ist an")
-        params = [10, 1500, 0, 0, 0, 0, 0]
-        self.send_command_long(183, [8, 1500, 0, 0, 0, 0, 0])
+    # UzL lights
+    def set_lights(self, value):     # value = -8 bis 8 Stufen heller oder dunkler
 
+        if value > 0:
+            buttons = 0b0100000000010000
+        elif value <= 0:
+            buttons = 0b0010000000010000
+            
+        for i in range(abs(value)):            
+            self.conn.mav.manual_control_send(
+            self.conn.target_system,                # target_system
+            0,
+            0,
+            0,
+            0,
+            buttons)                                # Bit 14 - licht an, Bit 13 - licht aus, 15 <- 0 (Von rechts nach links)             
+            self.conn.mav.manual_control_send(
+            self.conn.target_system,                # target_system
+            0,
+            0,
+            0,
+            0,
+            0b0000000000010000)       
 
     def send_command_long(self, command, params=[0, 0, 0, 0, 0, 0, 0], confirmation=0):
         """ Function to abstract long commands
@@ -239,7 +258,7 @@ class Bridge(object):
         self.conn.mav.rc_channels_override_send(
             self.conn.target_system,                # target_system
             self.conn.target_component,             # target_component
-            *rc_channel_values)                     # RC channel list, in microseconds.
+            *rc_channel_values)                     # RC channel list, in microseconds.       
 
     def arm_throttle(self, arm_throttle):
         """ Arm throttle
