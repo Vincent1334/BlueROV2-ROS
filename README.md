@@ -221,4 +221,7 @@ Für eine manuelle Steuerung des BlueROVs mittels Joystick startet man
 ```
 roslaunch core user_mav.launch
 ```
-
+Das folgende Launchfile stellt elementare [Topics](https://github.com/Vincent1334/BlueROV2-ROS/tree/main/src/core/src/bridge) für den BlueRov zur verfügung.
+```
+roslaunch core bluerov2_node.launch
+```
