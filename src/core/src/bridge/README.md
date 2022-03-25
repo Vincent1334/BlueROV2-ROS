@@ -7,7 +7,7 @@
 Once the BlueRov is connected to your computer, run:
 
 ```bash
-$ roslaunch bluerov_ros_playground bluerov_node.launch
+$ roslaunch core bluerov2_node.launch
 ```
 You can select the input device with: `bluerov_node_device:=udp:localhost:14550` or `bluerov_node_device:=/dev/ttyACM0` argument.
 The default value is `udp:192.168.2.1:14550`.
