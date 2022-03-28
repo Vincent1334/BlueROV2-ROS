@@ -1,4 +1,4 @@
-# BlueROV2 ROS
+# BlueRov2 ROS
 
 ```
                       +-----------------------+         +------------------------+
@@ -37,7 +37,7 @@
                                                         +------------------------+
 ```
 
-## Instalation
+## Installation
 
 ### Raspberry Pi
 
@@ -50,26 +50,26 @@ Mavlink dient zur Kommunikation zwischen dem Topside Computer und dem Pixhawk. D
 sudo apt-get install python3-dev python3-opencv python3-wxgtk4.0 python3-pip python3-matplotlib python3-lxml python3-pygame
 ```
 
-Nun kann mit hilfe von pip die MAVlink Bibliothek installiert werden
+Nun kann mit Hilfe von pip die MAVlink-Bibliothek installiert werden
 
 ```
 pip3 install PyYAML mavproxy --user
 ```
 
-Nach abschluss der Instalation muss man noch der gewünschten Shell die nötigen Befehle verlinken.
+Nach Abschluss der Installation muss man noch der gewünschten Shell die nötigen Befehle verlinken.
 
 ```
 echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
 ```
 
-Wenn es zu Permission problemen kommt, muss man noch die Zugrifsrechte für den aktuellen Benutzer anpassen
+Wenn es zu Permissions-Problemen kommt, muss man noch die Zugrifsrechte für den aktuellen Benutzer anpassen
 
 ```
 sudo usermod -a -G dialout <username>
 ```
 
 #### GStreamer
-Der GStreamer wird dafür verwendet, den Video output der intigrierten Kamera als Stream dem Topside Computer zur verfügung zu stellen. Um den GStreamer mit dem gewünschten h264 Code zu verwenden, müssen folgende Plugins instaliert werden.
+Der GStreamer wird dafür verwendet, den Video-Output der integrierten Kamera dem Topside Computer als Stream zur Verfügung zu stellen. Um den GStreamer mit dem gewünschten h264 Code zu verwenden, müssen folgende Plugins installiert werden.
 
 ```
 sudo apt-get install libgstreamer-plugins-base1.0-dev
@@ -79,13 +79,13 @@ sudo apt-get install libgstreamer-plugins-ugly1.0-dev
 ```
 
 #### USBIP
-Das letzte Programm stellt die USB-Schnittstellen des Raspberry Pi dem Topside Computer zur verfügung. Als erstes muss linux-tools-generic installiert werden, welches unteranderm USBIP beinhaltet.
+Das letzte Programm stellt die USB-Schnittstellen des Raspberry Pi dem Topside Computer zur Verfügung. Als erstes muss linux-tools-generic installiert werden, welches unter Anderem USBIP beinhaltet.
 
 ```
 sudo apt-get install linux-tools-generic 
 ```
 
-Nach der Installation muss man als erstes das für "usbip" wichtige Kernelmodul.
+Nach der Installation muss man als erstes das für "usbip" wichtige Kernelmodul laden.
 
 ```
 sudo modprobe usbip-host 
@@ -136,7 +136,7 @@ interface eth0
 static ip_address=192.168.2.2/24
 static routers=192.168.2.1
 ```
-Jetzt ist der Pi bereit zum einsatz.
+Jetzt ist der Pi bereit zum Einsatz.
 
 ### Topside Computer
 
@@ -146,7 +146,7 @@ http://wiki.ros.org/kinetic/Installation/Ubuntu
 
 #### QGroundControl
 
-QGroundContol kann dazu verwendet werden, den BlueROV ohne ROS direkt fahrbereit zu machen. Das Programm verfügt über eine MAVlink schnittstelle, sowie Kamera und Joystick integration. Die instalation erfolgt über folgenden Befehl
+QGroundContol kann dazu verwendet werden, den BlueRov2 ohne ROS direkt fahrbereit zu machen. Das Programm verfügt über eine MAVlink-Schnittstelle, sowie Kamera- und Joystick-Integration. Die Installation erfolgt über folgenden Befehl
 
 ```
 sudo usermod -a -G dialout $USER
@@ -155,11 +155,11 @@ sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y
 sudo apt install libqt5gui5 -y
 ```
 
-Im anschluss kann [QGroundContol](https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage) heruntergeladen werden.
-Um die Video funktion nutzen zu können, muss für den GStreamer die Plugins bad und libav instaliert werden.
+Im Anschluss kann [QGroundContol](https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage) heruntergeladen werden.
+Um die Video-Funktion nutzen zu können, müssen für den GStreamer die Plugins bad und libav installiert werden.
 
 #### MAVRos
-Um MavRos zu instalieren werden folgende Befehle ausgeführt.
+Um MavRos zu installieren werden folgende Befehle ausgeführt.
 ```
 sudo apt-get install ros-kinetic-mavros ros-kinetic-mavros-extras
 wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
@@ -177,14 +177,14 @@ sudo python -m pip install --upgrade pymavlink
 
 #### Netzwerk
 
-Der Topside Computer benötigt die statische IP-Adresse ***192.168.2.1*** um mit dem BlueROV komunizieren zu können.
+Der Topside Computer benötigt die statische IP-Adresse ***192.168.2.1*** um mit dem BlueRov2 kommunizieren zu können.
 
 ---
 ## Inbetriebnahme
 
-### BlueROV
-1. Verbindungsaufbau mit dem BlueROV über SSH
-2. Starten des Video streams
+### BlueRov2
+1. Verbindungsaufbau mit dem BlueRov2 über SSH
+2. Starten des Video-Streams
    ```
    gst-launch-1.0 v4l2src device=/dev/video2 ! queue ! video/x-h264,width=1920,height=1080,framerate=30/1 ! h264parse ! rtph264pay ! udpsink host=192.168.2.1 port=5600
    ```
@@ -199,13 +199,13 @@ Der Topside Computer benötigt die statische IP-Adresse ***192.168.2.1*** um mit
     mavproxy.py --master /dev/ttyACM0 --baudrate 921600 --aircraft bluerov --out 192.168.2.1:14550
     ```
 
-Die Arbeitschritte 1-4 wurden in einem Skript automatisiert. Dieses lässt sich durch folgenden Befehl ausführen:
+--> Die Arbeitsschritte 2-4 wurden in einem Skript automatisiert. Dieses lässt sich durch folgenden Befehl ausführen:
     ```
     ./startUp.bash
     ```
 
 ### Topside Computer
-Je nach Anwendugsfall, kann man mit QGroundControll oder ROS arbeiten.
+Je nach Anwendungsfall, kann man mit QGroundControll oder ROS arbeiten.
 
 #### Sonar über USBIP einbinden
 Um das Sonar über USBIp einzubinden, werden folgende Befehle ausgeführt.
@@ -216,7 +216,7 @@ sudo usbip attach -r 192.168.2.2 -b 1-1.4
 
 #### Launchfiles übersicht
 
-Um nur das Videobild der Kamera zu erfassen, kann man folgendes launchfile starten
+Um nur das Videobild der Kamera zu erfassen, kann man folgendes Launchfile starten. Dies muss vor dem Start des bluerov2_node Launchfiles erfolgen.
 ```
 roslaunch core video.launch
 ```
@@ -224,7 +224,7 @@ Für eine manuelle Steuerung des BlueROVs mittels Joystick startet man
 ```
 roslaunch core user_mav.launch
 ```
-Das folgende Launchfile stellt elementare [Topics](https://github.com/Vincent1334/BlueROV2-ROS/tree/main/src/core/src/bridge) für den BlueRov zur verfügung.
+Das folgende Launchfile stellt elementare [Topics](https://github.com/Vincent1334/BlueROV2-ROS/tree/main/src/core/src/bridge) für den BlueRov2 zur Verfügung.
 ```
 roslaunch core bluerov2_node.launch
 ```
