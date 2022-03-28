@@ -14,7 +14,9 @@ The default value is `udp:192.168.2.1:14550`.
 
 ## Topics
 The following topics are available:
-`$ rostopic list
+```bash
+$ rostopic list
+```
 
  - **/BlueRov2/arm** - `std_msgs/Bool`
  - **/BlueRov2/battery** - `sensor_msgs/BatteryState`
