@@ -199,7 +199,10 @@ Der Topside Computer benötigt die statische IP-Adresse ***192.168.2.1*** um mit
     mavproxy.py --master /dev/ttyACM0 --baudrate 921600 --aircraft bluerov --out 192.168.2.1:14550
     ```
 
-Die Arbeitschritte 1-4 können natürlich auch in einem Skript automatisiert werden.
+Die Arbeitschritte 1-4 wurden in einem Skript automatisiert. Dieses lässt sich durch folgenden Befehl ausführen:
+    ```
+    ./startUp.bash
+    ```
 
 ### Topside Computer
 Je nach Anwendugsfall, kann man mit QGroundControll oder ROS arbeiten.
