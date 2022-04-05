@@ -126,6 +126,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/bluerov/Schreibtisch/BlueROV2/build/gtest/cmake_install.cmake")
+  include("/home/bluerov/Schreibtisch/BlueROV2/build/som_wall_detection/cmake_install.cmake")
   include("/home/bluerov/Schreibtisch/BlueROV2/build/core/cmake_install.cmake")
   include("/home/bluerov/Schreibtisch/BlueROV2/build/tritech_micron/cmake_install.cmake")
 

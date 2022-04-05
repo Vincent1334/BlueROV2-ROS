@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>som_wall_detection</name>
+    <version>0.0.1</version>
+    <description>SOM based quay wall detection</description>
+    <license>BSD</license>
+    <!-- TODO put your names here -->
+    <maintainer email="pia.luedemann@student.uni-luebeck.de">Pia Sophie Luedemann</maintainer>    
+    <maintainer email="vincent.jansen@student.uni-luebeck.de">Vincent Raphael Jansen</maintainer>    
+    <maintainer email="timlucas.rabbel@student.uni-luebeck.de">Tim-Lucas Rabbel</maintainer>    
+    <author email="pia.luedemann@student.uni-luebeck.de">Pia Sophie Luedemann</author>
+    <author email="vincent.jansen@student.uni-luebeck.de">Vincent Rapahel Jansen</author>
+    <author email="timlucas.rabbel@student.uni-luebeck.de">Tim-Lucas Rabbel</author>
+    <buildtool_depend>catkin</buildtool_depend>
+    <depend>geometry_msgs</depend>
+    <depend>rospy</depend>
+    <depend>sensor_msgs</depend>
+    <depend>std_msgs</depend>
+    <depend>visualization_msgs</depend>
+    <export></export>
+</package>

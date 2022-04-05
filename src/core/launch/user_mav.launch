@@ -12,6 +12,7 @@
   <arg name="config_yaml" value="$(find mavros)/launch/apm_config.yaml"/>
   <arg name="joy_dev" default="/dev/input/js0"/>
   <arg name="log_output" default="screen"/>
+  <arg name="bluerov_node_device" default="udp:192.168.2.1:14550"/>
 
   <node pkg="mavros" type="mavros_node" name="mavros" required="true" clear_params="true" output="$(arg log_output)">
     <param name="fcu_url" value="$(arg fcu_url)"/>
@@ -31,8 +32,13 @@
     <param name="dev" type="string" value="$(arg joy_dev)" />
   </node>
 
-  <node pkg="rosservice" type="rosservice" name="mavros_set_stream" args="call --wait /mavros/set_stream_rate 0 10 1"/>
+  <node pkg="rosservice" type="rosservice" name="mavros_set_stream" args="call --wait /mavros/set_stream_rate 0 10 1"/> 
 
+  <!-- start bluerov2 node -->
+    <node respawn="true" pkg="core" type="node" name="node" output="$(arg log_output)">
+        <param name="device" value="$(arg bluerov_node_device)"/>
+    </node>  
+  
   <!-- start user node -->
   <node pkg="core" type="user_mav" name="user_node" output="$(arg log_output)"/>
   

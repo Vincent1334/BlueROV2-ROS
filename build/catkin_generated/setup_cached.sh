@@ -8,4 +8,3 @@
 
 # modified environment variables
 export PWD='/home/bluerov/Schreibtisch/BlueROV2/build'
-export ROS_PACKAGE_PATH='/home/bluerov/Schreibtisch/blueROV2/src:/home/bluerov/Schreibtisch/BlueROV2/src:/opt/ros/kinetic/share'

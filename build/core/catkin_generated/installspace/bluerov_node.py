@@ -31,7 +31,7 @@ from sensor_msgs.msg import Image
 from sensor_msgs.msg import Imu
 from std_msgs.msg import Bool
 from std_msgs.msg import String
-from std_msgs.msg import UInt16
+from std_msgs.msg import UInt16, Int16
 
 class BlueRov(Bridge):
     def __init__(self, device='udp:192.168.2.1:14550', baudrate=115200):
@@ -56,7 +56,7 @@ class BlueRov(Bridge):
                 '/battery',
                 BatteryState,
                 1
-            ],
+            ],           
             [
                 self._create_camera_msg,
                 '/camera/image_raw',
@@ -88,6 +88,13 @@ class BlueRov(Bridge):
                 self._setpoint_velocity_cmd_vel_callback,
                 '/setpoint_velocity/cmd_vel',
                 TwistStamped,
+                1
+            ],
+             #Light experimental UzL
+            [
+                self._create_lights_msg,
+                '/lights',
+                Int16,
                 1
             ],
             [
@@ -212,7 +219,7 @@ class BlueRov(Bridge):
 
         self.set_rc_channel_pwm(channel_id, msg.data)
 
-    def _set_mode_callback(self, msg, _):
+    def _set_mode_callback(self, msg):
         """ Set ROV mode from topic
 
         Args:
@@ -265,6 +272,10 @@ class BlueRov(Bridge):
             None,
             ]
         self.set_attitude_target(params)
+
+    #UzL lights msg
+    def _create_lights_msg(self, msg, topic):
+        self.set_lights(msg.data)        
 
     def _create_header(self, msg):
         """ Create ROS message header

@@ -147,6 +147,10 @@ if __name__ == '__main__':
             continue
 
         frame = video.frame()
-        cv2.imshow('BlueROV2 Camera', frame)
+        width = 1920/2
+        height = 1080/2
+        dim = (width, height)
+        img = cv2.resize(frame, dim, interpolation = cv2.INTER_AREA)
+        cv2.imshow('BlueROV2 Camera', img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

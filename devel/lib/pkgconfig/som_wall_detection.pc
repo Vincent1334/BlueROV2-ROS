@@ -1,0 +1,8 @@
+prefix=/home/bluerov/Schreibtisch/BlueROV2/devel
+
+Name: som_wall_detection
+Description: Description of som_wall_detection
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs sensor_msgs std_msgs visualization_msgs

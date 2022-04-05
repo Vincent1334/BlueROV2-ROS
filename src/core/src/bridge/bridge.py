@@ -122,8 +122,7 @@ class Bridge(object):
         if value > 0:
             buttons = 0b0100000000010000
         elif value <= 0:
-            buttons = 0b0010000000010000
-            
+            buttons = 0b0010000000010000        
         for i in range(abs(value)):            
             self.conn.mav.manual_control_send(
             self.conn.target_system,                # target_system
@@ -138,8 +137,14 @@ class Bridge(object):
             0,
             0,
             0,
-            0b0000000000010000)       
-
+            0b0000000000010000)
+        self.conn.mav.manual_control_send(
+            self.conn.target_system,                # target_system
+            0,
+            0,
+            0,
+            0,
+            0)
     def send_command_long(self, command, params=[0, 0, 0, 0, 0, 0, 0], confirmation=0):
         """ Function to abstract long commands
 
