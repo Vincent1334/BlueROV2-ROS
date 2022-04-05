@@ -4,22 +4,25 @@
 
 ## Usage
 
-Once the BlueRov is connected to your computer, run:
+Once the BlueRov2 is connected to your computer, run:
 
 ```bash
-$ roslaunch bluerov_ros_playground bluerov_node.launch
+$ roslaunch core bluerov2_node.launch
 ```
 You can select the input device with: `bluerov_node_device:=udp:localhost:14550` or `bluerov_node_device:=/dev/ttyACM0` argument.
 The default value is `udp:192.168.2.1:14550`.
 
 ## Topics
-The folowing topics are available:
-`$ rostopic list`
+The following topics are available:
+```bash
+$ rostopic list
+```
 
  - **/BlueRov2/arm** - `std_msgs/Bool`
  - **/BlueRov2/battery** - `sensor_msgs/BatteryState`
  - **/BlueRov2/camera/image_raw** - `sensor_msgs/Image`
  - **/BlueRov2/imu/data** - `sensor_msgs/Imu`
+ - **/BlueRov2/lights** - `std_msgs/Int16`
  - **/BlueRov2/mode/set** - `std_msgs/String`
  - **/BlueRov2/odometry** - `nav_msgs/Odometry`
  - **/BlueRov2/rc_channel1/set_pwm** - `std_msgs/UInt16`
@@ -48,18 +51,28 @@ The folowing topics are available:
 ```bash
 # Set manual mode
 $ rostopic pub -1 /BlueRov2/mode/set std_msgs/String "manual"
+
 # Arm the vehicle
 $ rostopic pub -1 /BlueRov2/arm std_msgs/Bool 1
+
+# Set light value (positive values for brighter light and negative values to dim the light)
+$ rostopic pub /BlueRov2/lights std_msgs/Int16 8
+
 # Set angular and linear speed
 $ rostopic pub -r 4 /BlueRov2/setpoint_velocity/cmd_vel geometry_msgs/TwistStamped "{header: auto, twist: {linear: {x: 10.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 0.0}}}"
+
 # Set MAIN OUT pwm value
 $ rostopic pub -r 4 /BlueRov2/servo1/set_pwm std_msgs/UInt16  1500
+
 # Visualize camera image
 $ rosrun image_view image_view image:=/BlueRov2/camera/image_raw
+
 # See ROV state
 $ rostopic echo /BlueRov2/state
+
 # Watch battery information
 $ rostopic echo /BlueRov2/battery
+
 # IMU information
 $ rostopic echo /BlueRov2/imu/data
 ```
