@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/include/tritech_micron/TritechMicronConfig.h"
   "CMakeFiles/tritech_micron_generate_messages_cpp"
-  "/home/bluerov/Schreibtisch/BlueROV2/devel/include/tritech_micron/TritechMicronConfig.h"
 )
 
 # Per-language clean rules from dependency scanning.

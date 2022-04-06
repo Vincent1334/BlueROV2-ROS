@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/lib/python3.8/site-packages/tritech_micron/msg/_TritechMicronConfig.py"
+  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/lib/python3.8/site-packages/tritech_micron/msg/__init__.py"
   "CMakeFiles/tritech_micron_generate_messages_py"
-  "/home/bluerov/Schreibtisch/BlueROV2/devel/lib/python2.7/dist-packages/tritech_micron/msg/_TritechMicronConfig.py"
-  "/home/bluerov/Schreibtisch/BlueROV2/devel/lib/python2.7/dist-packages/tritech_micron/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

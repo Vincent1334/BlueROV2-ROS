@@ -9,11 +9,11 @@ Reads and maintains the following parameters on the ROS server
 - \b "~gain" : \b [double] Gain min: 0.0, default: 0.5, max: 1.0
 - \b "~ad_low" : \b [double] Minimum amplitude in dB min: 0.0, default: 0.0, max: 80.0
 - \b "~ad_high" : \b [double] Maximum amplitude in dB min: 0.0, default: 80.0, max: 80.0
-- \b "~left_limit" : \b [double] Left limit in rad min: 0.0, default: 2.35619449019, max: 6.28318530718
-- \b "~right_limit" : \b [double] Right limit in rad min: 0.0, default: 3.92699081699, max: 6.28318530718
+- \b "~left_limit" : \b [double] Left limit in rad min: 0.0, default: 2.356194490192345, max: 6.283185307179586
+- \b "~right_limit" : \b [double] Right limit in rad min: 0.0, default: 3.9269908169872414, max: 6.283185307179586
 - \b "~speed" : \b [double] Speed of sound min: 1400.0, default: 1500.0, max: 1600.0
 - \b "~range" : \b [double] Range in meters min: 2.0, default: 10.0, max: 100.0
 - \b "~mo_time" : \b [int] Motor speed in microseconds min: 0, default: 250, max: 2550
 - \b "~nbins" : \b [int] Number of bins per slice min: 0, default: 400, max: 1500
-- \b "~step" : \b [double] Motor step size in rad min: 0.000981747704247, default: 0.0314159265359, max: 0.250345664583
+- \b "~step" : \b [double] Motor step size in rad min: 0.0009817477042468104, default: 0.031415926535897934, max: 0.2503456645829366
 

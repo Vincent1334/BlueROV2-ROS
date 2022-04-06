@@ -8,7 +8,10 @@ project(core)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+	std_msgs
   rospy
+  message_generation
+  std_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -45,11 +48,16 @@ catkin_python_setup()
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
+add_message_files(
+	FILES
+	Bar30.msg
+	Attitude.msg
+	Set_depth.msg
+	Set_heading.msg
+	Set_velocity.msg
+	Set_target.msg
+	State.msg
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -66,10 +74,10 @@ catkin_python_setup()
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -102,8 +110,10 @@ catkin_python_setup()
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES bluerov_ros_playground
-#  CATKIN_DEPENDS rospy
+#  LIBRARIES core
+  CATKIN_DEPENDS rospy
+  CATKIN_DEPENDS message_runtime
+#  DEPENDS system_lib
 #  DEPENDS system_lib
 )
 
@@ -177,11 +187,13 @@ include_directories(
 # )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
-install(FILES
+install(FILES  
   launch/mav_pluginlists.yaml
   launch/user_mav.launch
   launch/video.launch
   launch/bluerov2_node.launch
+  launch/control.launch
+
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
 )
 
@@ -193,11 +205,19 @@ install(DIRECTORY
 
 catkin_install_python(PROGRAMS
   src/bluerov/bin/user_mav
-  src/bluerov/bin/video
+  src/bluerov/bin/video  
   src/bridge/bridge.py
   src/bridge/bluerov_node.py
   src/bridge/node
+  src/controller/depth_controller.py
+  src/controller/heading_controller.py
+  src/controller/velocity_controller.py
+  src/controller/commander.py  
+  src/controller/gamepad.py
+  src/interface/gui.py
+
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+
 )
 
 #############

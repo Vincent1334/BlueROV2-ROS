@@ -1,6 +1,5 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3.8
 
-from time import sleep
 from pymavlink import mavutil
 
 class Bridge(object):
@@ -10,7 +9,7 @@ class Bridge(object):
         conn (TYPE): MAVLink connection
         data (dict): Deal with all data
     """
-    def __init__(self, device='udp:192.168.2.1:14550', baudrate=115200):
+    def __init__(self, device='udpin:192.168.2.1:14560', baudrate=115200):
         """
         Args:
             device (str, optional): Input device
@@ -18,6 +17,11 @@ class Bridge(object):
             baudrate (int, optional): Baudrate for serial communication
         """
         self.conn = mavutil.mavlink_connection(device, baud=baudrate)
+
+        self.conn.wait_heartbeat()
+        self.conn.mav.request_data_stream_send(self.conn.target_system, self.conn.target_component,
+                            mavutil.mavlink.MAV_DATA_STREAM_ALL,4, 1)
+            
         self.data = {}
 
     def get_data(self):
@@ -115,30 +119,6 @@ class Bridge(object):
         #https://github.com/ArduPilot/pymavlink/pull/128
         params = [mavutil.mavlink.MAV_MODE_GUIDED, 0, 0, 0, 0, 0, 0]
         self.send_command_long(mavutil.mavlink.MAV_CMD_DO_SET_MODE, params)
-
-    # UzL lights
-    def set_lights(self, value):     # value = -8 bis 8 Stufen heller oder dunkler
-
-        if value > 0:
-            buttons = 0b0100000000010000
-        elif value <= 0:
-            buttons = 0b0010000000010000
-            
-        for i in range(abs(value)):            
-            self.conn.mav.manual_control_send(
-            self.conn.target_system,                # target_system
-            0,
-            0,
-            0,
-            0,
-            buttons)                                # Bit 14 - licht an, Bit 13 - licht aus, 15 <- 0 (Von rechts nach links)             
-            self.conn.mav.manual_control_send(
-            self.conn.target_system,                # target_system
-            0,
-            0,
-            0,
-            0,
-            0b0000000000010000)       
 
     def send_command_long(self, command, params=[0, 0, 0, 0, 0, 0, 0], confirmation=0):
         """ Function to abstract long commands
@@ -245,20 +225,39 @@ class Bridge(object):
         # pwm 1000-2000
         mavutil.mavfile.set_servo(self.conn, id, pwm)
 
-    def set_rc_channel_pwm(self, id, pwm=1100):
+    def set_rc_channel_pwm(self, id, pwm=1500):
         """ Set RC channel pwm value
 
         Args:
             id (TYPE): Channel id
             pwm (int, optional): Channel pwm value 1100-2000
         """
-        rc_channel_values = [65535 for _ in range(8)]
+        rc_channel_values = [65535 for _ in range(10)] #8 for mavlink1
         rc_channel_values[id] = pwm
         #http://mavlink.org/messages/common#RC_CHANNELS_OVERRIDE
         self.conn.mav.rc_channels_override_send(
             self.conn.target_system,                # target_system
             self.conn.target_component,             # target_component
-            *rc_channel_values)                     # RC channel list, in microseconds.       
+            *rc_channel_values)                     # RC channel list, in microseconds.
+    
+    def set_manual_control(self,joy_list=[0]*4, buttons_list=[0]*16):
+        """ Set a MANUAL_CONTROL message for dealing with more control with ArduSub
+        for now it is just to deal with lights under test...
+        """
+        x,y,z,r = 0,0,0,0#32767,32767,32767,32767
+        b = 0
+        for i in range(len(buttons_list)):
+            b = b | (buttons_list[i]<<i)
+        print("MANUAL_CONTROL_SEND : x : {}, y : {}, z : {}, r : {}, b : {}".format(x,y,z,r,b))
+        #https://mavlink.io/en/messages/common.html MANUAL_CONTROL ( #69 )
+        self.conn.mav.manual_control_send(
+               self.conn.target_system,
+                x,
+                y,
+                z,
+                r,
+                b)
+
 
     def arm_throttle(self, arm_throttle):
         """ Arm throttle
@@ -280,6 +279,28 @@ class Bridge(object):
 if __name__ == '__main__':
     bridge = Bridge()
     #bridge = Bridge(device='udp:localhost:14550')
+    #i=0
+    #filemav = open("mavlinkdata.txt", 'w')
     while True:
         bridge.update()
         bridge.print_data()
+        #filemav.write("{}\n".format(bridge.data))
+        #bridge.set_servo_pwm(9,1800)
+        #i+=1
+    #filemav.close()
+        
+
+
+#        if 'SCALED_PRESSURE' not in bridge.get_data():
+#            print('NO PRESSURE DATA')
+
+
+#        else :
+#            bar30_data = bridge.get_data()['SCALED_PRESSURE']
+#            print("bar30data : ",bar30_data)
+#            time_boot_ms = bar30_data['time_boot_ms']
+#            press_abs    = bar30_data['press_abs']
+#            press_diff   = bar30_data['press_diff']
+#            temperature  = bar30_data['temperature']
+#            print("\n\n\n")
+#            print( "time :",time_boot_ms,"press_abs :", press_abs, "press_diff :",press_diff, "temperature :", temperature)

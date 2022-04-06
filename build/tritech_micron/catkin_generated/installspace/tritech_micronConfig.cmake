@@ -67,14 +67,14 @@ set(tritech_micron_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(tritech_micron_SOURCE_PREFIX /home/bluerov/Schreibtisch/BlueROV2/src/tritech_micron)
-  set(tritech_micron_DEVEL_PREFIX /home/bluerov/Schreibtisch/BlueROV2/devel)
+  set(tritech_micron_SOURCE_PREFIX /Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/tritech_micron)
+  set(tritech_micron_DEVEL_PREFIX /Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel)
   set(tritech_micron_INSTALL_PREFIX "")
   set(tritech_micron_PREFIX ${tritech_micron_DEVEL_PREFIX})
 else()
   set(tritech_micron_SOURCE_PREFIX "")
   set(tritech_micron_DEVEL_PREFIX "")
-  set(tritech_micron_INSTALL_PREFIX /home/bluerov/Schreibtisch/BlueROV2/install)
+  set(tritech_micron_INSTALL_PREFIX /Users/vincent/Documents/Uni/Semester_5/BlueROV2/install)
   set(tritech_micron_PREFIX ${tritech_micron_INSTALL_PREFIX})
 endif()
 
@@ -119,9 +119,11 @@ endif()
 set(libraries "")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
-  if("${library}" MATCHES "^(debug|optimized|general)$")
+  if("${library}" MATCHES "^(debug|optimized|general|rt|pthread|dl)$")
     list(APPEND tritech_micron_LIBRARIES ${library})
   elseif(${library} MATCHES "^-l")
+    list(APPEND tritech_micron_LIBRARIES ${library})
+  elseif(${library} MATCHES "^-framework")
     list(APPEND tritech_micron_LIBRARIES ${library})
   elseif(${library} MATCHES "^-")
     # This is a linker flag/option (like -pthread)
@@ -154,7 +156,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/bluerov/Schreibtisch/BlueROV2/install/lib;/home/bluerov/Schreibtisch/BlueROV2/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /Users/vincent/Documents/Uni/Semester_5/BlueROV2/install/lib;/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/lib;/Users/vincent/opt/miniconda3/envs/ROS/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +213,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(tritech_micron_LIBRARIES ${tritech_micron_LIBRARIES})
 
   _list_append_unique(tritech_micron_LIBRARY_DIRS ${${tritech_micron_dep}_LIBRARY_DIRS})
-  list(APPEND tritech_micron_EXPORTED_TARGETS ${${tritech_micron_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(tritech_micron_EXPORTED_TARGETS ${${tritech_micron_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "tritech_micron-msg-extras.cmake")

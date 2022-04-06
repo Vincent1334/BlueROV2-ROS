@@ -9,6 +9,6 @@
     </node>
 	
 	<!-- start control node -->
-	<node pkg="controller" type="depth_controller" name="depth_controller" output="screen"/>
+	<node pkg="core" type="depth_controller" name="depth_controller" output="screen"/>
 </launch>
 

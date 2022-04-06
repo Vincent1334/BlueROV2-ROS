@@ -1,0 +1,2 @@
+set(core_MESSAGE_FILES "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/msg/Bar30.msg;/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/msg/Attitude.msg;/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/msg/Set_depth.msg;/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/msg/Set_heading.msg;/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/msg/Set_velocity.msg;/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/msg/Set_target.msg;/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/msg/State.msg")
+set(core_SERVICE_FILES "")

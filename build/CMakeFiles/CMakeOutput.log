@@ -1,8 +1,8 @@
-The system is: Linux - 4.15.0-142-generic - x86_64
+The system is: Darwin - 21.4.0 - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /usr/bin/cc 
-Build flags: 
-Id flags: 
+Compiler: /Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fPIE;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/vincent/opt/miniconda3/envs/ROS/include
+Id flags:  
 
 The output was:
 0
@@ -10,12 +10,12 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/3.5.1/CompilerIdC/a.out"
+The C compiler identification is Clang, found in "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/3.21.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
-Build flags: 
-Id flags: 
+Compiler: /Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fPIE;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-std=c++14;-fmessage-length=0;-isystem;/Users/vincent/opt/miniconda3/envs/ROS/include
+Id flags:  
 
 The output was:
 0
@@ -23,560 +23,322 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/3.5.1/CompilerIdCXX/a.out"
-
-Determining if the C compiler works passed with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_4aec0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4aec0.dir/build.make CMakeFiles/cmTC_4aec0.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_4aec0.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_4aec0.dir/testCCompiler.c.o   -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_4aec0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4aec0.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_4aec0.dir/testCCompiler.c.o  -o cmTC_4aec0 -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
-
+The CXX compiler identification is Clang, found in "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/3.21.3/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_de13a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_de13a.dir/build.make CMakeFiles/cmTC_de13a.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_de13a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de13a.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o  -o cmTC_de13a -rdynamic  
-Using built-in specs.
-COLLECT_GCC=/usr/bin/cc
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Run Build Command(s):/Users/vincent/opt/miniconda3/envs/ROS/bin/make -f Makefile cmTC_6bce0/fast && /Users/vincent/opt/miniconda3/envs/ROS/bin/make  -f CMakeFiles/cmTC_6bce0.dir/build.make CMakeFiles/cmTC_6bce0.dir/build
+make[1]: Entering directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -c /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCCompilerABI.c
+clang version 11.1.0
+Target: x86_64-apple-darwin13.4.0
 Thread model: posix
-gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_de13a' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJhMbWb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_de13a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
+InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin
+clang-11: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ (in-process)
+ "/Users/vincent/opt/miniconda3/envs/ROS/bin/clang-11" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_OSX -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fcompatibility-qualified-id-block-type-checking -target-cpu core2 -target-feature +ssse3 -debugger-tuning=lldb -target-linker-version 530 -v -resource-dir /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0 -dependency-file CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /Users/vincent/opt/miniconda3/envs/ROS/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdebug-compilation-dir /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -x c /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCCompilerABI.c
+clang -cc1 version 11.1.0 based upon LLVM 11.1.0 default target x86_64-apple-darwin21.4.0
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Users/vincent/opt/miniconda3/envs/ROS/include
+ /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking C executable cmTC_6bce0
+/Users/vincent/opt/miniconda3/envs/ROS/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bce0.dir/link.txt --verbose=1
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/vincent/opt/miniconda3/envs/ROS/lib -L/Users/vincent/opt/miniconda3/envs/ROS/lib -v -Wl,-v CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -o cmTC_6bce0 
+clang version 11.1.0
+Target: x86_64-apple-darwin13.4.0
+Thread model: posix
+InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin
+ "/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/vincent/opt/miniconda3/envs/ROS/lib/libLTO.11.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -pie -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_6bce0 -L/Users/vincent/opt/miniconda3/envs/ROS/lib -search_paths_first -headerpad_max_install_names -pie -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/vincent/opt/miniconda3/envs/ROS/lib -v CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -lSystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 16:51:25 Apr  5 2021
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+Library search paths:
+	/Users/vincent/opt/miniconda3/envs/ROS/lib
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+make[1]: Leaving directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/Users/vincent/opt/miniconda3/envs/ROS/include]
+    add: [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include]
+    add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+  end of search list found
+  collapse include dir [/Users/vincent/opt/miniconda3/envs/ROS/include] ==> [/Users/vincent/opt/miniconda3/envs/ROS/include]
+  collapse include dir [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include] ==> [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include]
+  collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+  implicit include dirs: [/Users/vincent/opt/miniconda3/envs/ROS/include;/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(x86_64-apple-darwin13\.4\.0-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_de13a/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_de13a.dir/build.make CMakeFiles/cmTC_de13a.dir/build]
-  ignore line: [make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten]
-  ignore line: [Building C object CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_de13a]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de13a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o  -o cmTC_de13a -rdynamic  ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Run Build Command(s):/Users/vincent/opt/miniconda3/envs/ROS/bin/make -f Makefile cmTC_6bce0/fast && /Users/vincent/opt/miniconda3/envs/ROS/bin/make  -f CMakeFiles/cmTC_6bce0.dir/build.make CMakeFiles/cmTC_6bce0.dir/build]
+  ignore line: [make[1]: Entering directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -c /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang version 11.1.0]
+  ignore line: [Target: x86_64-apple-darwin13.4.0]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_de13a' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJhMbWb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_de13a /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccJhMbWb.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [--sysroot=/] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [-m] ==> ignore
-    arg [elf_x86_64] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-zrelro] ==> ignore
+  ignore line: [InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin]
+  ignore line: [clang-11: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ (in-process)]
+  ignore line: [ "/Users/vincent/opt/miniconda3/envs/ROS/bin/clang-11" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_OSX -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fcompatibility-qualified-id-block-type-checking -target-cpu core2 -target-feature +ssse3 -debugger-tuning=lldb -target-linker-version 530 -v -resource-dir /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0 -dependency-file CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /Users/vincent/opt/miniconda3/envs/ROS/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdebug-compilation-dir /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -x c /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 11.1.0 based upon LLVM 11.1.0 default target x86_64-apple-darwin21.4.0]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /Users/vincent/opt/miniconda3/envs/ROS/include]
+  ignore line: [ /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [Linking C executable cmTC_6bce0]
+  ignore line: [/Users/vincent/opt/miniconda3/envs/ROS/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6bce0.dir/link.txt --verbose=1]
+  ignore line: [/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -pie -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /Users/vincent/opt/miniconda3/envs/ROS/lib -L/Users/vincent/opt/miniconda3/envs/ROS/lib -v -Wl -v CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -o cmTC_6bce0 ]
+  ignore line: [clang version 11.1.0]
+  ignore line: [Target: x86_64-apple-darwin13.4.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin]
+  link line: [ "/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/vincent/opt/miniconda3/envs/ROS/lib/libLTO.11.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -pie -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_6bce0 -L/Users/vincent/opt/miniconda3/envs/ROS/lib -search_paths_first -headerpad_max_install_names -pie -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/vincent/opt/miniconda3/envs/ROS/lib -v CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o -lSystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/lib/libLTO.11.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-platform_version] ==> ignore
+    arg [macos] ==> ignore
+    arg [12.0.0] ==> ignore
+    arg [12.3] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_de13a] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
-    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
-    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_de13a.dir/CMakeCCompilerABI.c.o] ==> ignore
-    arg [-lgcc] ==> lib [gcc]
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--no-as-needed] ==> ignore
-    arg [-lc] ==> lib [c]
-    arg [-lgcc] ==> lib [gcc]
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--no-as-needed] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-  remove lib [gcc]
-  remove lib [gcc_s]
-  remove lib [gcc]
-  remove lib [gcc_s]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
-  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
-  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
-  implicit libs: [c]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
-  implicit fwks: []
-
-
-
-
-Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_61a8f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_61a8f.dir/build.make CMakeFiles/cmTC_61a8f.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_61a8f.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_61a8f.dir/feature_tests.c.o   -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_61a8f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61a8f.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_61a8f.dir/feature_tests.c.o  -o cmTC_61a8f -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_restrict
-    Feature record: C_FEATURE:1c_static_assert
-    Feature record: C_FEATURE:1c_variadic_macros
-
-
-Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_47826/fast"
-/usr/bin/make -f CMakeFiles/cmTC_47826.dir/build.make CMakeFiles/cmTC_47826.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_47826.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_47826.dir/feature_tests.c.o   -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_47826
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47826.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_47826.dir/feature_tests.c.o  -o cmTC_47826 -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:1c_restrict
-    Feature record: C_FEATURE:0c_static_assert
-    Feature record: C_FEATURE:1c_variadic_macros
-
-
-Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_5e80a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5e80a.dir/build.make CMakeFiles/cmTC_5e80a.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_5e80a.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_5e80a.dir/feature_tests.c.o   -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_5e80a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e80a.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_5e80a.dir/feature_tests.c.o  -o cmTC_5e80a -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
-
-
-    Feature record: C_FEATURE:1c_function_prototypes
-    Feature record: C_FEATURE:0c_restrict
-    Feature record: C_FEATURE:0c_static_assert
-    Feature record: C_FEATURE:0c_variadic_macros
-Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_40638/fast"
-/usr/bin/make -f CMakeFiles/cmTC_40638.dir/build.make CMakeFiles/cmTC_40638.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_40638.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_40638.dir/testCXXCompiler.cxx.o -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_40638
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40638.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_40638.dir/testCXXCompiler.cxx.o  -o cmTC_40638 -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
+    arg [cmTC_6bce0] ==> ignore
+    arg [-L/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> dir [/Users/vincent/opt/miniconda3/envs/ROS/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-dead_strip_dylibs] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_6bce0.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/vincent/opt/miniconda3/envs/ROS/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> [/Users/vincent/opt/miniconda3/envs/ROS/lib]
+  collapse library dir [/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> [/Users/vincent/opt/miniconda3/envs/ROS/lib]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+  implicit libs: []
+  implicit objs: []
+  implicit dirs: [/Users/vincent/opt/miniconda3/envs/ROS/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9465b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9465b.dir/build.make CMakeFiles/cmTC_9465b.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_9465b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9465b.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9465b -rdynamic  
-Using built-in specs.
-COLLECT_GCC=/usr/bin/c++
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Run Build Command(s):/Users/vincent/opt/miniconda3/envs/ROS/bin/make -f Makefile cmTC_44b28/fast && /Users/vincent/opt/miniconda3/envs/ROS/bin/make  -f CMakeFiles/cmTC_44b28.dir/build.make CMakeFiles/cmTC_44b28.dir/build
+make[1]: Entering directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -std=c++14 -fmessage-length=0 -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -c /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp
+clang version 11.1.0
+Target: x86_64-apple-darwin13.4.0
 Thread model: posix
-gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9465b' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJDmHOz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9465b /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
+InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin
+clang-11: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+ (in-process)
+ "/Users/vincent/opt/miniconda3/envs/ROS/bin/clang-11" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_OSX -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fcompatibility-qualified-id-block-type-checking -target-cpu core2 -target-feature +ssse3 -debugger-tuning=lldb -target-linker-version 530 -v -resource-dir /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0 -dependency-file CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /Users/vincent/opt/miniconda3/envs/ROS/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /Users/vincent/opt/miniconda3/envs/ROS/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -std=c++14 -fdeprecated-macro -fdebug-compilation-dir /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -x c++ /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 11.1.0 based upon LLVM 11.1.0 default target x86_64-apple-darwin21.4.0
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Users/vincent/opt/miniconda3/envs/ROS/include
+ /Users/vincent/opt/miniconda3/envs/ROS/bin/../include/c++/v1
+ /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+End of search list.
+Linking CXX executable cmTC_44b28
+/Users/vincent/opt/miniconda3/envs/ROS/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44b28.dir/link.txt --verbose=1
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -std=c++14 -fmessage-length=0 -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/vincent/opt/miniconda3/envs/ROS/lib -L/Users/vincent/opt/miniconda3/envs/ROS/lib -v -Wl,-v CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_44b28 
+clang version 11.1.0
+Target: x86_64-apple-darwin13.4.0
+Thread model: posix
+InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin
+ "/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/vincent/opt/miniconda3/envs/ROS/lib/libLTO.11.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -pie -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_44b28 -L/Users/vincent/opt/miniconda3/envs/ROS/lib -search_paths_first -headerpad_max_install_names -pie -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/vincent/opt/miniconda3/envs/ROS/lib -v CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-530
+BUILD 16:51:25 Apr  5 2021
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+Library search paths:
+	/Users/vincent/opt/miniconda3/envs/ROS/lib
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+Framework search paths:
+	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+make[1]: Leaving directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/Users/vincent/opt/miniconda3/envs/ROS/include]
+    add: [/Users/vincent/opt/miniconda3/envs/ROS/bin/../include/c++/v1]
+    add: [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include]
+    add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+  end of search list found
+  collapse include dir [/Users/vincent/opt/miniconda3/envs/ROS/include] ==> [/Users/vincent/opt/miniconda3/envs/ROS/include]
+  collapse include dir [/Users/vincent/opt/miniconda3/envs/ROS/bin/../include/c++/v1] ==> [/Users/vincent/opt/miniconda3/envs/ROS/include/c++/v1]
+  collapse include dir [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include] ==> [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include]
+  collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+  implicit include dirs: [/Users/vincent/opt/miniconda3/envs/ROS/include;/Users/vincent/opt/miniconda3/envs/ROS/include/c++/v1;/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(x86_64-apple-darwin13\.4\.0-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_9465b/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_9465b.dir/build.make CMakeFiles/cmTC_9465b.dir/build]
-  ignore line: [make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten]
-  ignore line: [Building CXX object CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_9465b]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9465b.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9465b -rdynamic  ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.12' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Run Build Command(s):/Users/vincent/opt/miniconda3/envs/ROS/bin/make -f Makefile cmTC_44b28/fast && /Users/vincent/opt/miniconda3/envs/ROS/bin/make  -f CMakeFiles/cmTC_44b28.dir/build.make CMakeFiles/cmTC_44b28.dir/build]
+  ignore line: [make[1]: Entering directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -std=c++14 -fmessage-length=0 -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -c /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang version 11.1.0]
+  ignore line: [Target: x86_64-apple-darwin13.4.0]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.12) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9465b' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJDmHOz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_9465b /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccJDmHOz.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--sysroot=/] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [-m] ==> ignore
-    arg [elf_x86_64] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-zrelro] ==> ignore
+  ignore line: [InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin]
+  ignore line: [clang-11: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+  ignore line: [ (in-process)]
+  ignore line: [ "/Users/vincent/opt/miniconda3/envs/ROS/bin/clang-11" -cc1 -triple x86_64-apple-macosx12.0.0 -Wundef-prefix=TARGET_OS_OSX -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-rounding-math -munwind-tables -target-sdk-version=12.3 -fcompatibility-qualified-id-block-type-checking -target-cpu core2 -target-feature +ssse3 -debugger-tuning=lldb -target-linker-version 530 -v -resource-dir /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0 -dependency-file CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /Users/vincent/opt/miniconda3/envs/ROS/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /Users/vincent/opt/miniconda3/envs/ROS/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -std=c++14 -fdeprecated-macro -fdebug-compilation-dir /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -o CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -x c++ /Users/vincent/opt/miniconda3/envs/ROS/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 11.1.0 based upon LLVM 11.1.0 default target x86_64-apple-darwin21.4.0]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /Users/vincent/opt/miniconda3/envs/ROS/include]
+  ignore line: [ /Users/vincent/opt/miniconda3/envs/ROS/bin/../include/c++/v1]
+  ignore line: [ /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+  ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_44b28]
+  ignore line: [/Users/vincent/opt/miniconda3/envs/ROS/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44b28.dir/link.txt --verbose=1]
+  ignore line: [/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -std=c++14 -fmessage-length=0 -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -pie -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /Users/vincent/opt/miniconda3/envs/ROS/lib -L/Users/vincent/opt/miniconda3/envs/ROS/lib -v -Wl -v CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_44b28 ]
+  ignore line: [clang version 11.1.0]
+  ignore line: [Target: x86_64-apple-darwin13.4.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Users/vincent/opt/miniconda3/envs/ROS/bin]
+  link line: [ "/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/vincent/opt/miniconda3/envs/ROS/lib/libLTO.11.dylib -dynamic -arch x86_64 -platform_version macos 12.0.0 12.3 -pie -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -o cmTC_44b28 -L/Users/vincent/opt/miniconda3/envs/ROS/lib -search_paths_first -headerpad_max_install_names -pie -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/vincent/opt/miniconda3/envs/ROS/lib -v CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/lib/libLTO.11.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-platform_version] ==> ignore
+    arg [macos] ==> ignore
+    arg [12.0.0] ==> ignore
+    arg [12.3] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-syslibroot] ==> ignore
+    arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_9465b] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
-    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
-    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_9465b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-    arg [-lstdc++] ==> lib [stdc++]
-    arg [-lm] ==> lib [m]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lc] ==> lib [c]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-  remove lib [gcc_s]
-  remove lib [gcc]
-  remove lib [gcc_s]
-  remove lib [gcc]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
-  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
-  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
-  implicit libs: [stdc++;m;c]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
-  implicit fwks: []
+    arg [cmTC_44b28] ==> ignore
+    arg [-L/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> dir [/Users/vincent/opt/miniconda3/envs/ROS/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-dead_strip_dylibs] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_44b28.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lSystem] ==> lib [System]
+    arg [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/vincent/opt/miniconda3/envs/ROS/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+  Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Users/vincent/opt/miniconda3/envs/ROS/lib/clang/11.1.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> [/Users/vincent/opt/miniconda3/envs/ROS/lib]
+  collapse library dir [/Users/vincent/opt/miniconda3/envs/ROS/lib] ==> [/Users/vincent/opt/miniconda3/envs/ROS/lib]
+  collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+  collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+  implicit libs: [c++]
+  implicit objs: []
+  implicit dirs: [/Users/vincent/opt/miniconda3/envs/ROS/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+  implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
 
 
-
-
-Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_733a2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_733a2.dir/build.make CMakeFiles/cmTC_733a2.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_733a2.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_733a2.dir/feature_tests.cxx.o -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_733a2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_733a2.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_733a2.dir/feature_tests.cxx.o  -o cmTC_733a2 -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
-
-
-    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:1cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:1cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:1cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:1cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:1cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:1cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:1cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
-Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_85a23/fast"
-/usr/bin/make -f CMakeFiles/cmTC_85a23.dir/build.make CMakeFiles/cmTC_85a23.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_85a23.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_85a23.dir/feature_tests.cxx.o -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_85a23
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85a23.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_85a23.dir/feature_tests.cxx.o  -o cmTC_85a23 -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
-
-
-    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:0cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:0cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:0cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:0cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:0cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:0cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:0cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
-Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_664c4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_664c4.dir/build.make CMakeFiles/cmTC_664c4.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building CXX object CMakeFiles/cmTC_664c4.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_664c4.dir/feature_tests.cxx.o -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_664c4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_664c4.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_664c4.dir/feature_tests.cxx.o  -o cmTC_664c4 -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
-
-
-    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:0cxx_alias_templates
-    Feature record: CXX_FEATURE:0cxx_alignas
-    Feature record: CXX_FEATURE:0cxx_alignof
-    Feature record: CXX_FEATURE:0cxx_attributes
-    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:0cxx_auto_type
-    Feature record: CXX_FEATURE:0cxx_binary_literals
-    Feature record: CXX_FEATURE:0cxx_constexpr
-    Feature record: CXX_FEATURE:0cxx_contextual_conversions
-    Feature record: CXX_FEATURE:0cxx_decltype
-    Feature record: CXX_FEATURE:0cxx_decltype_auto
-    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:0cxx_default_function_template_args
-    Feature record: CXX_FEATURE:0cxx_defaulted_functions
-    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:0cxx_delegating_constructors
-    Feature record: CXX_FEATURE:0cxx_deleted_functions
-    Feature record: CXX_FEATURE:0cxx_digit_separators
-    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:0cxx_explicit_conversions
-    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:0cxx_extern_templates
-    Feature record: CXX_FEATURE:0cxx_final
-    Feature record: CXX_FEATURE:0cxx_func_identifier
-    Feature record: CXX_FEATURE:0cxx_generalized_initializers
-    Feature record: CXX_FEATURE:0cxx_generic_lambdas
-    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:0cxx_inline_namespaces
-    Feature record: CXX_FEATURE:0cxx_lambdas
-    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:0cxx_local_type_template_args
-    Feature record: CXX_FEATURE:0cxx_long_long_type
-    Feature record: CXX_FEATURE:0cxx_noexcept
-    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:0cxx_nullptr
-    Feature record: CXX_FEATURE:0cxx_override
-    Feature record: CXX_FEATURE:0cxx_range_for
-    Feature record: CXX_FEATURE:0cxx_raw_string_literals
-    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:0cxx_return_type_deduction
-    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:0cxx_rvalue_references
-    Feature record: CXX_FEATURE:0cxx_sizeof_member
-    Feature record: CXX_FEATURE:0cxx_static_assert
-    Feature record: CXX_FEATURE:0cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:0cxx_thread_local
-    Feature record: CXX_FEATURE:0cxx_trailing_return_types
-    Feature record: CXX_FEATURE:0cxx_unicode_literals
-    Feature record: CXX_FEATURE:0cxx_uniform_initialization
-    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:0cxx_user_literals
-    Feature record: CXX_FEATURE:0cxx_variable_templates
-    Feature record: CXX_FEATURE:0cxx_variadic_macros
-    Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e4016/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e4016.dir/build.make CMakeFiles/cmTC_e4016.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_e4016.dir/CheckIncludeFile.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_e4016.dir/CheckIncludeFile.c.o   -c /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_e4016
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4016.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_e4016.dir/CheckIncludeFile.c.o  -o cmTC_e4016 -rdynamic 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
+Run Build Command(s):/Users/vincent/opt/miniconda3/envs/ROS/bin/make -f Makefile cmTC_53c1c/fast && /Users/vincent/opt/miniconda3/envs/ROS/bin/make  -f CMakeFiles/cmTC_53c1c.dir/build.make CMakeFiles/cmTC_53c1c.dir/build
+make[1]: Entering directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_53c1c.dir/CheckIncludeFile.c.o
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_53c1c.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_53c1c.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_53c1c.dir/CheckIncludeFile.c.o -c /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_53c1c
+/Users/vincent/opt/miniconda3/envs/ROS/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53c1c.dir/link.txt --verbose=1
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/vincent/opt/miniconda3/envs/ROS/lib -L/Users/vincent/opt/miniconda3/envs/ROS/lib  CMakeFiles/cmTC_53c1c.dir/CheckIncludeFile.c.o -o cmTC_53c1c 
+make[1]: Leaving directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
 
 
-Determining if the function pthread_create exists in the pthread passed with the following output:
-Change Dir: /home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a35b8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a35b8.dir/build.make CMakeFiles/cmTC_a35b8.dir/build
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird betreten
-Building C object CMakeFiles/cmTC_a35b8.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a35b8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a35b8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a35b8.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a35b8.dir/CheckFunctionExists.c.o  -o cmTC_a35b8 -rdynamic -lpthread 
-make[1]: Verzeichnis „/home/bluerov/Schreibtisch/BlueROV2/build/CMakeFiles/CMakeTmp“ wird verlassen
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp
 
+Run Build Command(s):/Users/vincent/opt/miniconda3/envs/ROS/bin/make -f Makefile cmTC_e74dd/fast && /Users/vincent/opt/miniconda3/envs/ROS/bin/make  -f CMakeFiles/cmTC_e74dd.dir/build.make CMakeFiles/cmTC_e74dd.dir/build
+make[1]: Entering directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e74dd.dir/src.c.o
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang -DCMAKE_HAVE_LIBC_PTHREAD  -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_e74dd.dir/src.c.o -MF CMakeFiles/cmTC_e74dd.dir/src.c.o.d -o CMakeFiles/cmTC_e74dd.dir/src.c.o -c /Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e74dd
+/Users/vincent/opt/miniconda3/envs/ROS/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e74dd.dir/link.txt --verbose=1
+/Users/vincent/opt/miniconda3/envs/ROS/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -isystem /Users/vincent/opt/miniconda3/envs/ROS/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/vincent/opt/miniconda3/envs/ROS/lib -L/Users/vincent/opt/miniconda3/envs/ROS/lib  CMakeFiles/cmTC_e74dd.dir/src.c.o -o cmTC_e74dd 
+make[1]: Leaving directory '/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
 

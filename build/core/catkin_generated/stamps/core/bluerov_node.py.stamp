@@ -31,7 +31,11 @@ from sensor_msgs.msg import Image
 from sensor_msgs.msg import Imu
 from std_msgs.msg import Bool
 from std_msgs.msg import String
-from std_msgs.msg import UInt16, Int16
+from std_msgs.msg import UInt16
+from sensor_msgs.msg import Joy
+from bluerov_ros_playground.msg import Bar30
+from bluerov_ros_playground.msg import Attitude 
+from bluerov_ros_playground.msg import State 
 
 class BlueRov(Bridge):
     def __init__(self, device='udp:192.168.2.1:14550', baudrate=115200):
@@ -56,7 +60,7 @@ class BlueRov(Bridge):
                 '/battery',
                 BatteryState,
                 1
-            ],           
+            ],
             [
                 self._create_camera_msg,
                 '/camera/image_raw',
@@ -66,7 +70,7 @@ class BlueRov(Bridge):
             [
                 self._create_ROV_state,
                 '/state',
-                String,
+                State,
                 1
             ],
             [
@@ -81,6 +85,18 @@ class BlueRov(Bridge):
                 Odometry,
                 1
             ],
+            [
+                self._create_bar30_msg,
+                '/bar30',
+                Bar30,
+                1
+            ],
+            [
+                self._create_imu_euler_msg,
+                '/imu/attitude',
+                Attitude,
+                1
+            ]
         ]
 
         self.sub_topics= [
@@ -88,13 +104,6 @@ class BlueRov(Bridge):
                 self._setpoint_velocity_cmd_vel_callback,
                 '/setpoint_velocity/cmd_vel',
                 TwistStamped,
-                1
-            ],
-             #Light experimental UzL
-            [
-                self._create_lights_msg,
-                '/lights',
-                Int16,
                 1
             ],
             [
@@ -109,7 +118,7 @@ class BlueRov(Bridge):
                 '/rc_channel{}/set_pwm',
                 UInt16,
                 1,
-                [1, 2, 3, 4, 5, 6, 7, 8]
+                [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
             ],
             [
                 self._set_mode_callback,
@@ -123,6 +132,12 @@ class BlueRov(Bridge):
                 Bool,
                 1
             ],
+            [
+                self._manual_control_callback,
+                '/manual_control',
+                Joy,
+                1
+            ]
         ]
 
         self.mavlink_msg_available = {}
@@ -219,7 +234,7 @@ class BlueRov(Bridge):
 
         self.set_rc_channel_pwm(channel_id, msg.data)
 
-    def _set_mode_callback(self, msg):
+    def _set_mode_callback(self, msg, _):
         """ Set ROV mode from topic
 
         Args:
@@ -236,6 +251,17 @@ class BlueRov(Bridge):
             _ (TYPE): Description
         """
         self.arm_throttle(msg.data)
+
+    def _manual_control_callback(self, msg, _):
+        
+        """ Set manual control message from topic
+        
+        Args:
+            msg (TYPE): ROS message
+            _ (TYPE): description
+        """
+        a=0
+        #self.set_manual_control([0,0,0,0], msg.buttons)
 
     def _setpoint_velocity_cmd_vel_callback(self, msg, _):
         """ Set angular and linear velocity from topic
@@ -273,10 +299,6 @@ class BlueRov(Bridge):
             ]
         self.set_attitude_target(params)
 
-    #UzL lights msg
-    def _create_lights_msg(self, msg, topic):
-        self.set_lights(msg.data)        
-
     def _create_header(self, msg):
         """ Create ROS message header
 
@@ -285,6 +307,43 @@ class BlueRov(Bridge):
         """
         msg.header.stamp = rospy.Time.now()
         msg.header.frame_id = self.model_base_link
+
+    def _create_bar30_msg(self):
+        if 'SCALED_PRESSURE2' not in self.get_data():
+            raise Exception('no SCALE_PRESSURE2 data')
+        else :
+            pass
+        bar30_data = self.get_data()['SCALED_PRESSURE2']
+        msg = Bar30()
+        self._create_header(msg)
+        msg.time_boot_ms = bar30_data['time_boot_ms']
+        msg.press_abs    = bar30_data['press_abs']
+        msg.press_diff   = bar30_data['press_diff']
+        msg.temperature  = bar30_data['temperature']
+
+        self.pub.set_data('/bar30',msg)
+    
+    def _create_imu_euler_msg(self):
+        if 'ATTITUDE' not in self.get_data():
+            raise Exception('no ATTITUDE data')
+        else :
+            pass
+        #http://mavlink.org/messages/common#ATTITUDE
+        attitude_data = self.get_data()['ATTITUDE']
+        orientation = [attitude_data[i] for i in ['roll', 'pitch', 'yaw']]
+        orientation_speed = [attitude_data[i] for i in ['rollspeed', 'pitchspeed', 'yawspeed']]
+        
+        msg = Attitude()
+        self._create_header(msg)
+        msg.time_boot_ms = attitude_data['time_boot_ms']
+        msg.roll = orientation[0]
+        msg.pitch = orientation[1]
+        msg.yaw = orientation[2]
+        msg.rollspeed = orientation_speed[0]
+        msg.pitchspeed = orientation_speed[1]
+        msg.yawspeed = orientation_speed[2]
+
+        self.pub.set_data('/imu/attitude',msg)
 
     def _create_odometry_msg(self):
         """ Create odometry message from ROV information
@@ -441,6 +500,7 @@ class BlueRov(Bridge):
         self._create_header(msg)
         msg.step = int(msg.step)
         self.pub.set_data('/camera/image_raw', msg)
+    
 
     def _create_ROV_state(self):
         """ Create ROV state message from ROV data
@@ -478,18 +538,19 @@ class BlueRov(Bridge):
 
         mode, arm = self.decode_mode(base_mode, custom_mode)
 
-        state = {
-            'motor': motor_throttle,
-            'light': light_on,
-            'camera_angle': camera_angle,
-            'mode': mode,
-            'arm': arm
-        }
-
-        string = String()
-        string.data = str(json.dumps(state, ensure_ascii=False))
-
-        self.pub.set_data('/state', string)
+        data = State()
+        data.arm = arm
+        data.rc1 = motor_throttle[0]
+        data.rc2 = motor_throttle[1]
+        data.rc3 = motor_throttle[2]
+        data.rc4 = motor_throttle[3]
+        data.rc5 = motor_throttle[4]
+        data.rc6 = motor_throttle[5]
+        data.light = light_on
+        data.camera = camera_angle
+        data.mode = mode
+        
+        self.pub.set_data('/state', data)
 
     def publish(self):
         """ Publish the data in ROS topics
