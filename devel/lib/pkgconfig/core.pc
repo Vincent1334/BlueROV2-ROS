@@ -1,8 +1,8 @@
-prefix=/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel
+prefix=/home/bluerov/Schreibtisch/BlueROV2/devel
 
 Name: core
 Description: Description of core
 Version: 0.0.0
-Cflags: -I/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/include
+Cflags: -I/home/bluerov/Schreibtisch/BlueROV2/devel/include
 Libs: -L${prefix}/lib 
 Requires: rospy message_runtime

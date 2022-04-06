@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """Tritech Micron CSV to PointCloud.
 

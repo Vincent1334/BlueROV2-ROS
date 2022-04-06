@@ -1,12 +1,12 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python2
 
 import rospy
 from std_msgs.msg import String
 from std_msgs.msg import UInt16
 from std_msgs.msg import Bool
-from bluerov_ros_playground.msg import Bar30
-from bluerov_ros_playground.msg import Set_depth
-from bluerov_ros_playground.msg import Set_target
+from core.msg import Bar30
+from core.msg import Set_depth
+from core.msg import Set_target
 #axis z goes up
 
 g = 9.81  # m.s^-2 gravitational acceleration 

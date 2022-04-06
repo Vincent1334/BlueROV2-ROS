@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/core/msg/Attitude.lisp"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/core/msg/Bar30.lisp"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_depth.lisp"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_heading.lisp"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_target.lisp"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_velocity.lisp"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/core/msg/State.lisp"
   "CMakeFiles/core_generate_messages_lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/core/msg/Bar30.lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/core/msg/State.lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_velocity.lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/core/msg/Attitude.lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_depth.lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_target.lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/core/msg/Set_heading.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

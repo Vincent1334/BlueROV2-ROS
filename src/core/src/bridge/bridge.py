@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from csv import Dialect
 from pymavlink import mavutil
 
 class Bridge(object):
@@ -9,7 +10,7 @@ class Bridge(object):
         conn (TYPE): MAVLink connection
         data (dict): Deal with all data
     """
-    def __init__(self, device='udpin:192.168.2.1:14560', baudrate=115200):
+    def __init__(self, device='udpin:192.168.2.2:14560', baudrate=115200):
         """
         Args:
             device (str, optional): Input device
@@ -244,7 +245,7 @@ class Bridge(object):
         """ Set a MANUAL_CONTROL message for dealing with more control with ArduSub
         for now it is just to deal with lights under test...
         """
-        x,y,z,r = 0,0,0,0#32767,32767,32767,32767
+        x,y,z,r = 0,0,0,0                           #32767,32767,32767,32767
         b = 0
         for i in range(len(buttons_list)):
             b = b | (buttons_list[i]<<i)

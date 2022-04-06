@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/Users/vincent/Documents/Uni/Semester_5/BlueROV2/build'
+export PWD='/home/bluerov/Schreibtisch/BlueROV2/build'

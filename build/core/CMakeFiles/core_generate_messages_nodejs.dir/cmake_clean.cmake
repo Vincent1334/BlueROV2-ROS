@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/gennodejs/ros/core/msg/Attitude.js"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/gennodejs/ros/core/msg/Bar30.js"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_depth.js"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_heading.js"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_target.js"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_velocity.js"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/gennodejs/ros/core/msg/State.js"
   "CMakeFiles/core_generate_messages_nodejs"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/core/msg/Bar30.js"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/core/msg/State.js"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_velocity.js"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/core/msg/Attitude.js"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_depth.js"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_target.js"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/gennodejs/ros/core/msg/Set_heading.js"
 )
 
 # Per-language clean rules from dependency scanning.

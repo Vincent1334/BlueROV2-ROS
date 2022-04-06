@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python2
 import sys
 from PyQt5 import QtGui, QtCore, QtWidgets, uic
 import rospy
@@ -6,10 +6,10 @@ from std_msgs.msg import UInt16
 from std_msgs.msg import Bool
 from sensor_msgs.msg import BatteryState
 from sensor_msgs.msg import Joy
-from bluerov_ros_playground.msg import Attitude, Bar30, Set_depth, Set_heading, Set_target, Set_velocity, State
+from core.msg import Attitude, Bar30, Set_depth, Set_heading, Set_target, Set_velocity, State
 from rosbagrecordthread import RosbagRecordThread
 
-PATH = "/home/nathan/ROS_bluerov2_ws/src/bluerov_ros_playground/bluerov_ros/src/interface/"
+PATH = "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/src/interface/"
 g = 9.81  # m.s^-2 gravitationnal acceleration  
 p0 = 990*100 #Pa surface pressure NEED to be cheked    
 rho = 1000 # kg.m^3  water density

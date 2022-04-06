@@ -8,13 +8,13 @@
   <param name="gain" type="double" value="0.5" />
   <param name="ad_low" type="double" value="0.0" />
   <param name="ad_high" type="double" value="80.0" />
-  <param name="left_limit" type="double" value="2.356194490192345" />
-  <param name="right_limit" type="double" value="3.9269908169872414" />
+  <param name="left_limit" type="double" value="2.35619449019" />
+  <param name="right_limit" type="double" value="3.92699081699" />
   <param name="speed" type="double" value="1500.0" />
   <param name="range" type="double" value="10.0" />
   <param name="mo_time" type="int" value="250" />
   <param name="nbins" type="int" value="400" />
-  <param name="step" type="double" value="0.031415926535897934" />
+  <param name="step" type="double" value="0.0314159265359" />
 </node>
 \endverbatim
 

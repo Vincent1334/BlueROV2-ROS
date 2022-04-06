@@ -76,23 +76,6 @@ ros::message_operations::Printer< ::core::Set_heading_<ContainerAllocator> >::st
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::core::Set_heading_<ContainerAllocator1> & lhs, const ::core::Set_heading_<ContainerAllocator2> & rhs)
-{
-  return lhs.enable_heading_ctrl == rhs.enable_heading_ctrl &&
-    lhs.pwm_max == rhs.pwm_max &&
-    lhs.KP == rhs.KP &&
-    lhs.KD == rhs.KD;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::core::Set_heading_<ContainerAllocator1> & lhs, const ::core::Set_heading_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace core
 
 namespace ros
@@ -102,17 +85,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
+// {'core': ['/home/bluerov/Schreibtisch/BlueROV2/src/core/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::core::Set_heading_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::core::Set_heading_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::core::Set_heading_<ContainerAllocator> >
@@ -121,6 +100,16 @@ struct IsFixedSize< ::core::Set_heading_<ContainerAllocator> >
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::core::Set_heading_<ContainerAllocator> const>
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::core::Set_heading_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::core::Set_heading_<ContainerAllocator> const>
   : TrueType
   { };
 
@@ -164,11 +153,11 @@ struct Definition< ::core::Set_heading_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "bool enable_heading_ctrl\n"
-"uint16 pwm_max\n"
-"uint32 KP\n"
-"uint32 KD\n"
-;
+    return "bool enable_heading_ctrl\n\
+uint16 pwm_max\n\
+uint32 KP\n\
+uint32 KD\n\
+";
   }
 
   static const char* value(const ::core::Set_heading_<ContainerAllocator>&) { return value(); }

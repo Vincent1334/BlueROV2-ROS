@@ -97,27 +97,6 @@ ros::message_operations::Printer< ::core::Attitude_<ContainerAllocator> >::strea
 return s;
 }
 
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator==(const ::core::Attitude_<ContainerAllocator1> & lhs, const ::core::Attitude_<ContainerAllocator2> & rhs)
-{
-  return lhs.header == rhs.header &&
-    lhs.time_boot_ms == rhs.time_boot_ms &&
-    lhs.roll == rhs.roll &&
-    lhs.pitch == rhs.pitch &&
-    lhs.yaw == rhs.yaw &&
-    lhs.rollspeed == rhs.rollspeed &&
-    lhs.pitchspeed == rhs.pitchspeed &&
-    lhs.yawspeed == rhs.yawspeed;
-}
-
-template<typename ContainerAllocator1, typename ContainerAllocator2>
-bool operator!=(const ::core::Attitude_<ContainerAllocator1> & lhs, const ::core::Attitude_<ContainerAllocator2> & rhs)
-{
-  return !(lhs == rhs);
-}
-
-
 } // namespace core
 
 namespace ros
@@ -127,17 +106,13 @@ namespace message_traits
 
 
 
+// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': True}
+// {'core': ['/home/bluerov/Schreibtisch/BlueROV2/src/core/msg'], 'std_msgs': ['/opt/ros/kinetic/share/std_msgs/cmake/../msg']}
+
+// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
-template <class ContainerAllocator>
-struct IsMessage< ::core::Attitude_<ContainerAllocator> >
-  : TrueType
-  { };
 
-template <class ContainerAllocator>
-struct IsMessage< ::core::Attitude_<ContainerAllocator> const>
-  : TrueType
-  { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::core::Attitude_<ContainerAllocator> >
@@ -147,6 +122,16 @@ struct IsFixedSize< ::core::Attitude_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsFixedSize< ::core::Attitude_<ContainerAllocator> const>
   : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::core::Attitude_<ContainerAllocator> >
+  : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsMessage< ::core::Attitude_<ContainerAllocator> const>
+  : TrueType
   { };
 
 template <class ContainerAllocator>
@@ -189,32 +174,34 @@ struct Definition< ::core::Attitude_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "Header header\n"
-"uint32 time_boot_ms\n"
-"float64 roll\n"
-"float64 pitch\n"
-"float64 yaw\n"
-"float64 rollspeed\n"
-"float64 pitchspeed\n"
-"float64 yawspeed\n"
-"\n"
-"\n"
-"================================================================================\n"
-"MSG: std_msgs/Header\n"
-"# Standard metadata for higher-level stamped data types.\n"
-"# This is generally used to communicate timestamped data \n"
-"# in a particular coordinate frame.\n"
-"# \n"
-"# sequence ID: consecutively increasing ID \n"
-"uint32 seq\n"
-"#Two-integer timestamp that is expressed as:\n"
-"# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n"
-"# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n"
-"# time-handling sugar is provided by the client library\n"
-"time stamp\n"
-"#Frame this data is associated with\n"
-"string frame_id\n"
-;
+    return "Header header\n\
+uint32 time_boot_ms\n\
+float64 roll\n\
+float64 pitch\n\
+float64 yaw\n\
+float64 rollspeed\n\
+float64 pitchspeed\n\
+float64 yawspeed\n\
+\n\
+\n\
+================================================================================\n\
+MSG: std_msgs/Header\n\
+# Standard metadata for higher-level stamped data types.\n\
+# This is generally used to communicate timestamped data \n\
+# in a particular coordinate frame.\n\
+# \n\
+# sequence ID: consecutively increasing ID \n\
+uint32 seq\n\
+#Two-integer timestamp that is expressed as:\n\
+# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')\n\
+# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')\n\
+# time-handling sugar is provided by the client library\n\
+time stamp\n\
+#Frame this data is associated with\n\
+# 0: no frame\n\
+# 1: global frame\n\
+string frame_id\n\
+";
   }
 
   static const char* value(const ::core::Attitude_<ContainerAllocator>&) { return value(); }

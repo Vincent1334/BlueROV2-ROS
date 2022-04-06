@@ -147,7 +147,7 @@ class State {
 
   static getMessageSize(object) {
     let length = 0;
-    length += _getByteLength(object.mode);
+    length += object.mode.length;
     return length + 33;
   }
 

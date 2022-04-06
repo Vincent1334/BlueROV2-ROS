@@ -9,7 +9,7 @@ from sensor_msgs.msg import Joy
 from core.msg import Attitude, Bar30, Set_depth, Set_heading, Set_target, Set_velocity, State
 from rosbagrecordthread import RosbagRecordThread
 
-PATH = "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/src/core/src/interface/"
+PATH = "/home/bluerov/Schreibtisch/BlueROV2/src/core/src/interface/"
 g = 9.81  # m.s^-2 gravitationnal acceleration  
 p0 = 990*100 #Pa surface pressure NEED to be cheked    
 rho = 1000 # kg.m^3  water density

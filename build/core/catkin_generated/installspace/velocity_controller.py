@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python2
 
 import rospy
 import time
@@ -8,8 +8,8 @@ from std_msgs.msg import String
 from std_msgs.msg import UInt16
 from std_msgs.msg import Bool
 from sensor_msgs.msg import Imu
-from bluerov_ros_playground.msg import Set_velocity
-from bluerov_ros_playground.msg import Set_target
+from core.msg import Set_velocity
+from core.msg import Set_target
 
 class Velocity_Control():
     """ Class Velocity_Control: reach velocity desired with PD control

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/include/tritech_micron/ScanConfig.h"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/lib/python3.8/site-packages/tritech_micron/cfg/ScanConfig.py"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/tritech_micron/docs/ScanConfig-usage.dox"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/tritech_micron/docs/ScanConfig.dox"
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/tritech_micron/docs/ScanConfig.wikidoc"
   "CMakeFiles/tritech_micron_gencfg"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/include/tritech_micron/ScanConfig.h"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/tritech_micron/docs/ScanConfig.dox"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/tritech_micron/docs/ScanConfig-usage.dox"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/lib/python2.7/dist-packages/tritech_micron/cfg/ScanConfig.py"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/tritech_micron/docs/ScanConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

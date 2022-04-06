@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel/share/common-lisp/ros/tritech_micron/msg/TritechMicronConfig.lisp"
   "CMakeFiles/tritech_micron_generate_messages_lisp"
+  "/home/bluerov/Schreibtisch/BlueROV2/devel/share/common-lisp/ros/tritech_micron/msg/TritechMicronConfig.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

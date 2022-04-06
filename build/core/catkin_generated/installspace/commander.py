@@ -1,12 +1,12 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python2
 
 import rospy
 from std_msgs.msg import UInt16
 from std_msgs.msg import Bool
 from sensor_msgs.msg import Joy
-from bluerov_ros_playground.msg import Set_velocity 
-from bluerov_ros_playground.msg import Set_heading 
-from bluerov_ros_playground.msg import Set_depth
+from core.msg import Set_velocity 
+from core.msg import Set_heading 
+from core.msg import Set_depth
 from time import sleep
 
 class Commander():

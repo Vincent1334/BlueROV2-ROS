@@ -33,8 +33,8 @@
    (setq _KD (round __KD))
    self)
   (:enable_depth_ctrl
-   (&optional (__enable_depth_ctrl :null))
-   (if (not (eq __enable_depth_ctrl :null)) (setq _enable_depth_ctrl __enable_depth_ctrl)) _enable_depth_ctrl)
+   (&optional __enable_depth_ctrl)
+   (if __enable_depth_ctrl (setq _enable_depth_ctrl __enable_depth_ctrl)) _enable_depth_ctrl)
   (:pwm_max
    (&optional __pwm_max)
    (if __pwm_max (setq _pwm_max __pwm_max)) _pwm_max)

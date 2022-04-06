@@ -33,9 +33,9 @@ from std_msgs.msg import Bool
 from std_msgs.msg import String
 from std_msgs.msg import UInt16
 from sensor_msgs.msg import Joy
-from bluerov_ros_playground.msg import Bar30
-from bluerov_ros_playground.msg import Attitude 
-from bluerov_ros_playground.msg import State 
+from core.msg import Bar30
+from core.msg import Attitude 
+from core.msg import State 
 
 class BlueRov(Bridge):
     def __init__(self, device='udp:192.168.2.1:14550', baudrate=115200):

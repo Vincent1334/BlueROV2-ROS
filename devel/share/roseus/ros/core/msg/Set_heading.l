@@ -31,8 +31,8 @@
    (setq _KD (round __KD))
    self)
   (:enable_heading_ctrl
-   (&optional (__enable_heading_ctrl :null))
-   (if (not (eq __enable_heading_ctrl :null)) (setq _enable_heading_ctrl __enable_heading_ctrl)) _enable_heading_ctrl)
+   (&optional __enable_heading_ctrl)
+   (if __enable_heading_ctrl (setq _enable_heading_ctrl __enable_heading_ctrl)) _enable_heading_ctrl)
   (:pwm_max
    (&optional __pwm_max)
    (if __pwm_max (setq _pwm_max __pwm_max)) _pwm_max)

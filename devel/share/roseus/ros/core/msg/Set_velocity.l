@@ -31,8 +31,8 @@
    (setq _KD (round __KD))
    self)
   (:enable_velocity_ctrl
-   (&optional (__enable_velocity_ctrl :null))
-   (if (not (eq __enable_velocity_ctrl :null)) (setq _enable_velocity_ctrl __enable_velocity_ctrl)) _enable_velocity_ctrl)
+   (&optional __enable_velocity_ctrl)
+   (if __enable_velocity_ctrl (setq _enable_velocity_ctrl __enable_velocity_ctrl)) _enable_velocity_ctrl)
   (:pwm_max
    (&optional __pwm_max)
    (if __pwm_max (setq _pwm_max __pwm_max)) _pwm_max)

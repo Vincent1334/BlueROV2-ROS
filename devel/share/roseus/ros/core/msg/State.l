@@ -43,8 +43,8 @@
    (setq _mode (string __mode))
    self)
   (:arm
-   (&optional (__arm :null))
-   (if (not (eq __arm :null)) (setq _arm __arm)) _arm)
+   (&optional __arm)
+   (if __arm (setq _arm __arm)) _arm)
   (:rc1
    (&optional __rc1)
    (if __rc1 (setq _rc1 __rc1)) _rc1)

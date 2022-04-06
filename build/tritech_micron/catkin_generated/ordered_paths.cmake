@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/Users/vincent/opt/miniconda3/envs/ROS/lib")
+set(ORDERED_PATHS "/opt/ros/kinetic/lib")

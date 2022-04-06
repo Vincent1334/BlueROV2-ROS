@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/python2
 # -*- coding: utf-8 -*-
 
 # Software License Agreement (BSD License)
@@ -54,19 +54,17 @@ PATH_TO_ADD_SUFFIX = ['bin']
 if IS_WINDOWS:
     # while catkin recommends putting dll's into bin, 3rd party packages often put dll's into lib
     # since Windows finds dll's via the PATH variable, prepend it with path to lib
-    PATH_TO_ADD_SUFFIX.extend(['lib'])
+    PATH_TO_ADD_SUFFIX.extend([['lib', os.path.join('lib', 'x86_64-linux-gnu')]])
 
 # subfolder of workspace prepended to CMAKE_PREFIX_PATH
 ENV_VAR_SUBFOLDERS = {
     'CMAKE_PREFIX_PATH': '',
-    # 'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': 'lib',
+    'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': ['lib', os.path.join('lib', 'x86_64-linux-gnu')],
     'PATH': PATH_TO_ADD_SUFFIX,
-    'PKG_CONFIG_PATH': os.path.join('lib', 'pkgconfig'),
-    # 'PYTHONPATH': 'lib/python3.8/site-packages',
+    'PKG_CONFIG_PATH': [os.path.join('lib', 'pkgconfig'), os.path.join('lib', 'x86_64-linux-gnu', 'pkgconfig')],
+    'PYTHONPATH': 'lib/python2.7/dist-packages',
 }
 
-if IS_WINDOWS or os.path.dirname(os.path.realpath(__file__)) != sys.prefix:
-    ENV_VAR_SUBFOLDERS['PYTHONPATH'] = 'lib/python3.8/site-packages'
 
 def rollback_env_variables(environ, env_var_subfolders):
     """
@@ -270,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/Users/vincent/Documents/Uni/Semester_5/BlueROV2/devel;/Users/vincent/opt/miniconda3/envs/ROS'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/bluerov/Schreibtisch/BlueROV2/devel;/opt/ros/kinetic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

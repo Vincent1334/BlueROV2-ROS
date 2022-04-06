@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python2
 
 import rospy
 import numpy as np
@@ -6,9 +6,9 @@ from std_msgs.msg import String
 from std_msgs.msg import UInt16
 from std_msgs.msg import Bool
 from sensor_msgs.msg import Imu
-from bluerov_ros_playground.msg import Attitude
-from bluerov_ros_playground.msg import Set_heading
-from bluerov_ros_playground.msg import Set_target
+from core.msg import Attitude
+from core.msg import Set_heading
+from core.msg import Set_target
 
 PI = np.pi
 
