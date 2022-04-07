@@ -16,6 +16,12 @@ rho = 1000 # kg.m^3  water density
 PI = 3.1415
 
 class Display(QtWidgets.QMainWindow):
+
+    #Uzl init interface Path
+    def __init__(self, path=''):
+        PATH = path
+
+
     """Manage the gui
     Listen topics to display information
     Publish parameters for controllers and target regularly in the display method
