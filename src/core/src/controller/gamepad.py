@@ -210,7 +210,7 @@ class Gamepad():
         """Set to zeros when joystisk come back to the center"""
         if pwm >= 1495 and pwm <= 1505: #to ensure that when stick are in the center neutral pwm i send
             pwm = self.pwm_neutral
-	return int(pwm)
+        return int(pwm)
 
     def publish(self):
         try:

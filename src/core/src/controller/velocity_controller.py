@@ -2,7 +2,7 @@
 
 import rospy
 import time
-import scipy.integrate
+import numpy as np
 import matplotlib.pyplot as plt
 from std_msgs.msg import String
 from std_msgs.msg import UInt16
@@ -102,7 +102,7 @@ class Velocity_Control():
         Plot acceleration and velocity on x-axis.
         Velocity calculated with trapeze method.
         """
-        self.speedX = self.speedX + scipy.integrate.trapz(self.accX, dx=0.02)
+        self.speedX = self.speedX + np.trapz(self.accX, dx=0.02)
         print("SPEED : {}".format(self.speedX))
         self.ax.plot(rospy.get_time()-self.t0, self.accX[1], "+b")
         self.ax.plot(rospy.get_time()-self.t0, self.speedX, "+g")
