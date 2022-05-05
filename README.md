@@ -77,6 +77,11 @@ sudo apt-get install libgstreamer-plugins-bad1.0-dev
 sudo apt-get install libgstreamer-plugins-good1.0-dev
 sudo apt-get install libgstreamer-plugins-ugly1.0-dev 
 ```
+Falls Probleme auftreten, kann man folgendes versuchen.
+```
+sudo apt-get install gstreamer1.0-plugins-bad
+sudo apt-get install gstreamer1.0-plugins-ugly
+```
 
 #### USBIP
 Das letzte Programm stellt die USB-Schnittstellen des Raspberry Pi dem Topside Computer zur Verfügung. Als erstes muss linux-tools-generic installiert werden, welches unter Anderem USBIP beinhaltet.
