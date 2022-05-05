@@ -81,6 +81,7 @@ Falls Probleme auftreten, kann man folgendes versuchen.
 ```
 sudo apt-get install gstreamer1.0-plugins-bad
 sudo apt-get install gstreamer1.0-plugins-ugly
+sudo apt-get install gstreamer1.0-libav
 ```
 
 #### USBIP
