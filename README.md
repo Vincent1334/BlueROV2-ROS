@@ -42,6 +42,7 @@
 ### Raspberry Pi
 
 Als verwendetes Betriebsystem empfehle ich PI Os lite. Jedoch kann auch jedes andere System für den Pi genutzt werden.
+Das Passwort für den Pi lautet "companion" und der Username "pi".
 
 #### MAVLink
 Mavlink dient zur Kommunikation zwischen dem Topside Computer und dem Pixhawk. Die nötigen Bibliotheken können mit folgendem Befehl instaliert werden.
